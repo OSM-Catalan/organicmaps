@@ -56,6 +56,7 @@ ru:Где поесть|Поесть|Еда|кушать|покушать
 be:Дзе паесці|паесці|ежа
 bg:Места за хапване|ядене|храна
 ar:طعام|أمكان لتناول الطعام
+ca:On menjar|alimentació|menjar|viandes|fruita|cuina|cuines
 cs:Kde se najíst|Jídlo
 da:Spisesteder|Mad
 nl:Waar iets gaan eten|Eten
@@ -95,6 +96,7 @@ ru:4Продукты|Еда|4Магазин
 be:4Прадукты|Ежа|4Магазін
 bg:4Продукти|Храна|4Магазин
 ar:طعام|متجر|بقالية
+ca:Alimentació|menjar|
 cs:Potraviny|Jídlo|Obchod
 da:Dagligvarer|Mad|Butik
 nl:Kruidenierswinkels|Eten|Winkel
@@ -134,6 +136,7 @@ ru:5Транспорт
 be:5Транспарт
 bg:5Транспорт
 ar:مواصلات|مواصلات
+ca:Transport|desplaçament|moviment
 cs:Doprava
 da:5Transport
 nl:5Transport
@@ -172,6 +175,7 @@ ru:3бензин|3дизель|4топливо|газ
 be:3бензін|3дызель|4паліва|газ
 bg:Гориво|Бензиностанция
 ar:1وقود|بنزين|سولار|ديزل|وقود الحافلات
+ca:Gasolinera|benzinera|estació de servei|combustible
 cs:2Čerpací stanice|Benzinová pumpa|benzinka
 da:Brændstof|Benzin
 nl:3Benzine
@@ -211,6 +215,7 @@ ru:4Парковка
 be:4Паркоўка
 bg:4Паркинг
 ar:موقف سيارات|مرافق ركن السيارات
+ca:Aparcament|pàrquing|estacionament|garatge
 cs:4Parkoviště
 da:4Parkering
 nl:4Parkeerplaats
@@ -249,6 +254,7 @@ ru:4Шоппинг|Магазин
 be:4Закупы|магазін
 bg:4Шопинг|Магазин
 ar:متجر|تسوق
+ca:Compres|botigues|magatzems
 cs:Nákupy|Obchod
 da:Indkøb|Butik
 nl:Winkelen|Winkel
@@ -288,6 +294,7 @@ ru:5Гостиница|гостиницы|отель|отели
 be:Гатель|гателі
 bg:Хотел|хотели
 ar:فندق|الفنادق
+ca:Hotel|hostal|allotjaments|dormir
 cs:Hotel|Hotely
 da:Hotel|Hoteller
 nl:Hotel|Hotels
@@ -326,6 +333,7 @@ ru:4Достопримечательности|3Туризм
 be:4Славутасці|4турызм
 bg:5Забележителности|4Туризъм
 ar:سياحة
+ca:Turisme|miradors|lloc turístic
 cs:Pamětihodnost
 da:5Seværdigheder|4Turisme|3sightseeing
 nl:5Bezienswaardigheden|4Toerisme
@@ -364,6 +372,7 @@ ru:Развлечения
 be:Забавы
 bg:Развлечение
 ar:ترفيه وتسلية|تسلية
+ca:Entreteniment|atraccions|oci
 cs:Zábava
 da:Underholdning
 nl:Uitgaan
@@ -402,6 +411,7 @@ ru:Ночная жизнь|С друзьями|Вечер с друзьями|п
 be:Начное жыццё|патусіць
 bg:Нощен живот|С приятели
 ar:أنشطة ترفيه ليلية
+ca:Vida nocturna
 cs:Noční život
 da:Natteliv
 nl:Nachtleven
@@ -440,6 +450,7 @@ ru:Отдых с детьми
 be:Сямейны адпачынак
 bg:Семейна почивка
 ar:عطلة عائلية
+ca:Oci familiar|diversió en família|família|vacances familiars
 cs:Dovolená s dětmi
 da:Familieferie
 nl:Gezinsvakantie
@@ -478,6 +489,7 @@ ru:3Банкомат
 be:3Банкамат
 bg:3Банкомат
 ar:ماكينة صرافة آلية|صراف|صراف آلي|صراف آلي
+ca:Caixer automàtic|caixer|atm
 cs:3Bankomat
 da:3Hæveautomat
 nl:3Geldautomaat
@@ -515,6 +527,7 @@ fa:خود پرداز
 en:2RV Facilities|4Caravan|Vanlife|5Campervan|5Motorhome
 ar:منشآت للمنازل المتنقلة
 be:Для аўтадамоў|5Аўтадом|5Трэйлер|5Караван|Дом на колах
+ca:Caravanes|caravàning|autocaravanes|càmpers
 fr:3Aménagements pour camping-car|caravane|mobile home
 es:Caravanas|Autocaravanas
 ru:Для автодомов|5Автодом|5Трейлер|Дом на колёсах
@@ -527,6 +540,7 @@ en:money|U+1F3E7|U+1F4B2|U+1F4B3|U+1F4B4|U+1F4B5|U+1F4B6|U+1F4B7
 ru:деньги
 bg:пари
 ar:ماكينة صراف آلي|الأموال|فلوس|صرافة آلية|نقود
+ca:diners|U+1F3E7|U+1F4B2|U+1F4B3|U+1F4B4|U+1F4B5|U+1F4B6|U+1F4B7
 cs:spořitelna|peníze
 da:penge
 nl:geld
@@ -564,6 +578,7 @@ ru:3Банк
 be:3Банк
 bg:3Банка
 ar:بنك
+ca:Banc|caixa|entitat bancària
 cs:3Banka
 da:3Bank
 nl:3Bank
@@ -601,6 +616,7 @@ en:money|U+1F3E6|U+1F4B0|U+1F4B2|U+1F4B3|U+1F4B4|U+1F4B5|U+1F4B6|U+1F4B7
 ru:деньги
 bg:пари
 ar:بنك|الأموال|فلوس|نقود|مال
+ca:diners|U+1F3E6|U+1F4B0|U+1F4B2|U+1F4B3|U+1F4B4|U+1F4B5|U+1F4B6|U+1F4B7
 cs:peníze
 da:3penge
 nl:geld
@@ -636,6 +652,7 @@ ru:Переработка|5Переработка отходов|Утилиза�
 be:Перапрацоўка|5Перапрацоўка адходаў|Утылізацыя адходаў|5Прыём другаснай сыравіны|5Здаць другсыравіну|Паасобны збор смецця|Сартаванне смецця|Паўторнае выкарыстанне|Утыль
 bg:Рециклиране|Преизползване|Разделно събиране|Сепаратор
 ar:إعادة تدوير|استغلال المخلفات|المواد القابلة لإعادة التدوير|جمع القمامة بشكل منفصل|فرز النفايات|إعادة الاستخدام
+ca:Reciclatge|contenidors|escombraries|recollida selectiva
 cs:Recyklace|Využití odpadu|Recyklovatelné|Oddělený sběr odpadků|Třídění odpadu|Opětovné použití
 da:Genbrug|Affaldsudnyttelse|Genanvendelig|Separate dagrenovationer|Affaldssortering
 nl:Recycling|Afvalgebruik|Recyclebaar materiaal|Gescheiden afvalinzameling|Afval sorteren|Hergebruik
@@ -672,6 +689,7 @@ en:3Currency Exchange|3exchange|money|U+1F4B1|U+1F4B2|U+1F4B4|U+1F4B5|U+1F4B6|U+
 ru:3Обмен валюты|обмен валют|обменник|4валюта|деньги
 bg:Чейндж бюро|пари|обмяна|валути
 ar:تحويل عملات|تغيير عملات|الصرف|الأموال|صرف عملات|صرف
+ca:Canvi de moneda|divises|diners|U+1F4B1|U+1F4B2|U+1F4B4|U+1F4B5|U+1F4B6|U+1F4B7
 cs:3Směnárna|peníze
 da:3Vekselbureau|3penge
 nl:3Wisselkantoor|3geld wisselen|wisselen|geld
@@ -706,6 +724,7 @@ en:2Bar|2pub|beer|drink|U+1F37A|U+1F37B|U+1F376|tavern|bars and pubs|brew pub|co
 ru:2Бар|2паб|пиво|выпить|пивной ресторан|пивбар|крафт|коктейль бар|пивная|коктейли|алкоголь|алкогольные напитки
 bg:2Бар|кръчма|бира|питие|напитка|таверна|коктейл|пиво|алкохол
 ar:بار|حانة|خمارة|بيرة|شراب
+ca:Bar|pub|taverna|granja|cafè|beguda|còctel|cocteleria|whisky|copes|cafeteria|U+1F37A|U+1F37B|U+1F376
 cs:2Bar|hospoda|pivo|pití|tekutiny
 da:2Bar|værtshus|kro|øl|pub|drink
 nl:2Bar|2pub|kroeg|bier|drinken
@@ -742,6 +761,7 @@ en:3Cafe|3restaurant|U+2615|U+1F356|U+1F357|U+1F35A|U+1F35B|U+1F35C|U+1F35D|U+1F
 ru:3Кафе|3ресторан|кофейня|столовая|кофе
 bg:3Кафе|3ресторант|кафене|столова|бюфет|заведение|ядене|храна
 ar:مقهى|مطعم|طعام|قهوة|كافتيريا
+ca:Cafè|restaurant|U+2615|U+1F356|U+1F357|U+1F35A|U+1F35B|U+1F35C|U+1F35D|U+1F363|U+1F366|U+1F367|U+1F368|U+1F369|U+1F370|U+1F372|U+1F374|U+1F377|U+1F60B|U+1F375|bistro|cafeteria|granja
 cs:3Kavárna|restaurace|hospoda
 da:3Café|restaurant
 nl:3Tearoom|3brasserie|3café|3restaurant
@@ -778,6 +798,7 @@ en:4Fast Food|3restaurant|3cafe|takeaway|U+1F354|U+1F355|U+1F35F|U+1F363|U+1F366
 ru:3Фастфуд|3ресторан|3кафе|закусочная|быстрое питание|снеки|перекусить|экспресс-питание
 bg:Бързо хранене|Фастфууд|кафе|храна|за вкъщи|ресторант|закусвалня
 ar:وجبات سريعة|مطعم|مقهى|وجبة جاهزة|طعام
+ca:Menjar ràpid|restaurant|cafè|per emportar|U+1F354|U+1F355|U+1F35F|U+1F363|U+1F366|U+1F367|U+1F368|U+1F369|U+1F370|U+1F372|U+1F374
 cs:2Rychlé občerstvení|4fastfood|kavárna|restaurace
 da:4Fastfood|restaurant|café|takeaway
 nl:4Fast food|3frituur|fritkot|3restaurant|afhaaleten
@@ -813,6 +834,7 @@ en:3Restaurant|3cafe|U+1F356|U+1F357|U+1F35A|U+1F35B|U+1F35C|U+1F35D|U+1F363|U+1
 ru:3Ресторан|3кафе|кухня
 bg:3ресторант|3кафе|храна|кухня|обяд|вечеря|заведение|бюфет
 ar:2مطعم|مقهى|طعام
+ca:Restaurant|cafè|U+1F356|U+1F357|U+1F35A|U+1F35B|U+1F35C|U+1F35D|U+1F363|U+1F366|U+1F367|U+1F368|U+1F369|U+1F370|U+1F372|U+1F374|U+1F377|U+1F60B|sopars|dinars
 cs:3Restaurace|hospoda|kavárna
 da:3Restaurant|café
 nl:3Restaurant|3café
@@ -850,6 +872,7 @@ ru:азс|агзс|агнкс|бензоколонка|бензозаправк�
 be:азс|агзс|агнкс|бензакалонка|бензазапраўка|4аўтазапраўка|3запраўка
 bg:Бензиностанция|Гориво|бензин|дизел|газ
 ar:محطة وقود|بترول
+ca:Gasolinera|benzinera|estació de servei|combustible|U+26FD
 cs:2pumpa
 da:3Tankstation
 nl:3Tankstation|3brandstof
@@ -882,6 +905,7 @@ ru:3Булочная|3пекарня
 bg:3Пекарна
 ar:مخبز|متجر
 cs:3Pekárna|Pekařství
+ca:Forn de pa|panaderia|U+1F35E
 da:2Bager|bageri
 nl:3Bakkerij
 fi:3Leipomo
@@ -917,6 +941,7 @@ en:Shop|U+1F3EA|U+1F3EC
 ru:4Магазин
 bg:4Магазин
 ar:متجر
+ca:Botiga|comerç|U+1F3EA|U+1F3EC
 cs:Obchod
 da:Butik|forretning
 de:3Verbrauchermarkt|Geschäft|Laden
@@ -954,6 +979,7 @@ ru:4Косметика
 bg:4Козметика
 be:4Касметыка
 ar:مستحضرات تجميل|تجميل
+en:Cosmètics|productes de bellesa|cura personal|maquillatge|U+1F3EC|U+1F3EA
 cs:4Kosmetika
 da:4Kosmetik
 nl:4Schoonheidsmiddelen
