@@ -981,7 +981,7 @@ ru:4Косметика
 bg:4Козметика
 be:4Касметыка
 ar:مستحضرات تجميل|تجميل
-en:Cosmètics|productes de bellesa|cura personal|maquillatge|U+1F3EC|U+1F3EA
+ca:Cosmètics|productes de bellesa|cura personal|maquillatge|U+1F3EC|U+1F3EA
 cs:4Kosmetika
 da:4Kosmetik
 nl:4Schoonheidsmiddelen
