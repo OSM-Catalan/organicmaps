@@ -157,7 +157,7 @@ public class EditorFragment extends BaseMwmFragment implements View.OnClickListe
 
     initViews(view);
 
-    mCategory.setText(Utils.getLocalizedFeatureType(getContext(), Editor.nativeGetCategory()));
+    mCategory.setText(Utils.getLocalizedFeatureType(requireContext(), Editor.nativeGetCategory()));
     final LocalizedStreet street = Editor.nativeGetStreet();
     mStreet.setText(street.defaultName);
 
@@ -352,7 +352,7 @@ public class EditorFragment extends BaseMwmFragment implements View.OnClickListe
 
     mNamesView = view.findViewById(R.id.recycler);
     mNamesView.setNestedScrollingEnabled(false);
-    mNamesView.setLayoutManager(new LinearLayoutManager(getActivity()));
+    mNamesView.setLayoutManager(new LinearLayoutManager(requireActivity()));
     mNamesAdapter = new MultilanguageAdapter(mParent);
     mNamesView.setAdapter(mNamesAdapter);
     mNamesAdapter.registerAdapterDataObserver(mNamesObserver);
@@ -432,12 +432,10 @@ public class EditorFragment extends BaseMwmFragment implements View.OnClickListe
     mEditPhoneLink = blockPhone.findViewById(R.id.edit_phone);
     mEditPhoneLink.setOnClickListener(this);
     mPhone.setOnClickListener(this);
-
-    View blockWeb = initBlock(view, Metadata.MetadataType.FMD_WEBSITE, R.id.block_website,
-            0, R.string.website, InputType.TYPE_TEXT_VARIATION_URI);
-    View blockEmail = initBlock(view, Metadata.MetadataType.FMD_EMAIL, R.id.block_email,
-            0, R.string.email, InputType.TYPE_TEXT_VARIATION_EMAIL_ADDRESS);
-
+    initBlock(view, Metadata.MetadataType.FMD_WEBSITE, R.id.block_website,
+            R.drawable.ic_website, R.string.website, InputType.TYPE_TEXT_VARIATION_URI);
+    initBlock(view, Metadata.MetadataType.FMD_EMAIL, R.id.block_email,
+            R.drawable.ic_email, R.string.email, InputType.TYPE_TEXT_VARIATION_EMAIL_ADDRESS);
     initBlock(view, Metadata.MetadataType.FMD_CONTACT_FACEBOOK, R.id.block_facebook,
             R.drawable.ic_facebook_white, R.string.facebook, InputType.TYPE_TEXT_VARIATION_URI);
     initBlock(view, Metadata.MetadataType.FMD_CONTACT_INSTAGRAM, R.id.block_instagram,
@@ -448,13 +446,12 @@ public class EditorFragment extends BaseMwmFragment implements View.OnClickListe
             R.drawable.ic_vk_white, R.string.vk, InputType.TYPE_TEXT_VARIATION_URI);
     initBlock(view, Metadata.MetadataType.FMD_CONTACT_LINE, R.id.block_line,
             R.drawable.ic_line_white, R.string.editor_line_social_network, InputType.TYPE_TEXT_VARIATION_URI);
+    initBlock(view, Metadata.MetadataType.FMD_OPERATOR, R.id.block_operator,
+            R.drawable.ic_operator, R.string.editor_operator, 0);
 
     View blockCuisine = view.findViewById(R.id.block_cuisine);
     blockCuisine.setOnClickListener(this);
     mCuisine = view.findViewById(R.id.cuisine);
-
-    View blockOperator = initBlock(view, Metadata.MetadataType.FMD_OPERATOR, R.id.block_operator,
-              R.drawable.ic_operator, R.string.editor_operator, 0);
 
     View blockWifi = view.findViewById(R.id.block_wifi);
     mWifi = view.findViewById(R.id.sw__wifi);
@@ -474,10 +471,7 @@ public class EditorFragment extends BaseMwmFragment implements View.OnClickListe
 
     mDetailsBlocks.put(Metadata.MetadataType.FMD_OPEN_HOURS, blockOpeningHours);
     mDetailsBlocks.put(Metadata.MetadataType.FMD_PHONE_NUMBER, blockPhone);
-    mDetailsBlocks.put(Metadata.MetadataType.FMD_WEBSITE, blockWeb);
-    mDetailsBlocks.put(Metadata.MetadataType.FMD_EMAIL, blockEmail);
     mDetailsBlocks.put(Metadata.MetadataType.FMD_CUISINE, blockCuisine);
-    mDetailsBlocks.put(Metadata.MetadataType.FMD_OPERATOR, blockOperator);
     mDetailsBlocks.put(Metadata.MetadataType.FMD_INTERNET, blockWifi);
   }
 
@@ -578,7 +572,7 @@ public class EditorFragment extends BaseMwmFragment implements View.OnClickListe
     mNamesCaption.setCompoundDrawablesRelativeWithIntrinsicBounds(
       null,
       null,
-      Graphics.tint(getActivity(), arrowResourceId, R.attr.iconTint),
+      Graphics.tint(requireActivity(), arrowResourceId, R.attr.iconTint),
       null);
   }
 
@@ -655,7 +649,7 @@ public class EditorFragment extends BaseMwmFragment implements View.OnClickListe
       message = R.string.editor_reset_edits_message;
     }
 
-    new AlertDialog.Builder(getActivity()).setTitle(message)
+    new AlertDialog.Builder(requireActivity()).setTitle(message)
                                           .setPositiveButton(getString(title).toUpperCase(), new DialogInterface.OnClickListener()
                                           {
                                             @Override

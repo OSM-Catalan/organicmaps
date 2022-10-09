@@ -16,12 +16,15 @@ import com.mapswithme.maps.base.OnBackPressListener;
 import com.mapswithme.maps.search.NativeMapSearchListener;
 import com.mapswithme.maps.search.SearchEngine;
 import com.mapswithme.maps.widget.PlaceholderView;
+import com.mapswithme.util.bottomsheet.MenuBottomSheetFragment;
+import com.mapswithme.util.bottomsheet.MenuBottomSheetItem;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class DownloaderFragment extends BaseMwmRecyclerFragment<DownloaderAdapter>
-                             implements OnBackPressListener
+                             implements OnBackPressListener,
+                                        MenuBottomSheetFragment.MenuBottomSheetInterface
 {
   private DownloaderToolbarController mToolbarController;
 
@@ -112,7 +115,7 @@ public class DownloaderFragment extends BaseMwmRecyclerFragment<DownloaderAdapte
   public void onCreate(@Nullable Bundle savedInstanceState)
   {
     super.onCreate(savedInstanceState);
-    getActivity().getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN);
+    requireActivity().getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN);
   }
 
   public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState)
@@ -141,7 +144,7 @@ public class DownloaderFragment extends BaseMwmRecyclerFragment<DownloaderAdapte
     }
 
     mBottomPanel = new BottomPanel(this, view);
-    mToolbarController = new DownloaderToolbarController(view, getActivity(), this);
+    mToolbarController = new DownloaderToolbarController(view, requireActivity(), this);
 
     update();
   }
@@ -229,5 +232,12 @@ public class DownloaderFragment extends BaseMwmRecyclerFragment<DownloaderAdapte
       placeholder.setContent(R.string.search_not_found, R.string.search_not_found_query);
     else
       placeholder.setContent(R.string.downloader_no_downloaded_maps_title, R.string.downloader_no_downloaded_maps_message);
+  }
+
+  @Override
+  @Nullable
+  public ArrayList<MenuBottomSheetItem> getMenuBottomSheetItems(String id)
+  {
+    return mAdapter != null ? mAdapter.getMenuItems() : null;
   }
 }

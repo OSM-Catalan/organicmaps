@@ -493,6 +493,7 @@
     ko = 후
     mr = नंतर
     nb = Senere
+    nl = Later
     pl = Później
     pt = Mais tarde
     pt-BR = Mais tarde
@@ -1005,6 +1006,7 @@
     ko = 다운로드
     mr = डाउनलोड करा
     nb = Last ned
+    nl = Downloaden
     pl = Pobierz
     pt = Descarregar
     pt-BR = Baixar
@@ -1939,6 +1941,8 @@
     ca = Emmagatzematge privat intern
     de = Interner persönlicher Speicher
     fr = Stockage interne privé
+    nl = Intern persoonlijk geheugen
+    pl = Wewnętrzna pamięć prywatna
     pt-BR = Armazenamento interno privado
     ru = Внутренний скрытый накопитель
     tr = Dahili özel depolama
@@ -1953,6 +1957,8 @@
     ca = Emmagatzematge compartit intern
     de = Interner gemeinsamer Speicher
     fr = Stockage interne partagé
+    nl = Intern gedeeld geheugen
+    pl = Wewnętrzna pamięć współdzielona
     pt-BR = Armazenamento interno compartilhado
     ru = Внутренний общий накопитель
     tr = Dahili paylaşılan depolama
@@ -1967,6 +1973,8 @@
     ca = Targeta SD
     de = SD-Karte
     fr = Carte SD
+    nl = SD-kaart
+    pl = Karta SD
     pt-BR = Cartão SD
     ru = SD-карта
     tr = SD kart
@@ -1981,6 +1989,8 @@
     ca = Emmagatzematge compartit extern
     de = Externer gemeinsamer Speicher
     fr = Stockage externe partagé
+    nl = Extern gedeeld geheugen
+    pl = Zewnętrzna pamięć współdzielona
     pt-BR = Armazenamento externo compartilhado
     ru = Внешний общий накопитель
     tr = Harici paylaşılan depolama
@@ -1995,6 +2005,8 @@
     ca = %1$@ lliures de %2$@
     de = %1$@ frei von %2$@
     fr = %1$@ libres sur %2$@
+    nl = %1$@ beschikbaar van %2$@
+    pl = %1$@ wolne z %2$@
     pt-BR = %1$@ livre de %2$@
     ru = %1$@ свободно из %2$@
     tr = %2$@'ın %1$@'ı boş
@@ -2048,6 +2060,8 @@
     ca = S'ha produït un error en moure els fitxers de mapes
     de = Fehler beim Verschieben der Karten
     fr = Erreur lors du déplacement des cartes
+    nl = Fout bij het verplaatsen van kaartbestanden
+    pl = Błąd przenoszenia plików map
     pt-BR = Erro ao mover arquivos de mapas
     ru = Ошибка перемещения файлов карт
     tr = Harita dosyalarını taşıma hatası
@@ -2239,7 +2253,7 @@
     ko = 식료품들
     mr = किराणा
     nb = Dagligvarer
-    nl = Kruidenierswinkels
+    nl = Boodschappen
     pl = Produkty
     pt = Lojas alimentares
     pt-BR = Mercados
@@ -3028,6 +3042,8 @@
     es = Caravanas
     eu = Karabanak
     fr = Aménagements pour camping-car
+    nl = Caravan faciliteiten
+    pl = Kamper
     ro = Pentru rulote
     ru = Для автодомов
     tr = Karavan tesisleri
@@ -3769,7 +3785,7 @@
 
   [version]
     comment = Prints version number in About dialog
-    tags = android,ios
+    tags = ios
     en = Version: %@
     ar = الاصدار: %@
     be = Версія: %@
@@ -4984,6 +5000,14 @@
     zh-Hans = 在地图上查看
     zh-Hant = 在地圖上查看
 
+  [menu]
+    comment = Menu button
+    tags = android
+    en = Menu
+    pl = Menu
+    ru = Меню
+    uk = Меню
+
   [website]
     comment = Text in menu
     tags = android,ios
@@ -5033,7 +5057,7 @@
     ca = Notícies
     cs = Zprávy
     da = Nyheder
-    de = Nachrichten
+    de = News
     el = Νέα
     es = Noticias
     fa = ﺭﺎﺒﺧﺍ
@@ -5098,7 +5122,7 @@
 
   [vk]
     comment = Text in the editor
-    tags = android
+    tags = android,ios
     en = VK
 
   [editor_line_social_network]
@@ -5115,7 +5139,7 @@
 
   [feedback]
     comment = Settings: Send feedback button and dialog title
-    tags = android,ios
+    tags = android
     en = Feedback
     ar = إرسال التعليقات
     be = Водгук
@@ -5307,7 +5331,7 @@
     sv = Donera
     sw = Changia
     th = บริจาค
-    tr = Bağış yapmak
+    tr = Bağış Yapın
     uk = Пожертвувати
     vi = Quyên tặng
     zh-Hans = 捐
@@ -9040,6 +9064,7 @@
     fr = Wikipédia
     it = Wikipedia
     mr = विकिपीडिया
+    pl = Wikipedia
     pt = Wikipédia
     pt-BR = Wikipédia
     ro = Wikipedia
@@ -10423,6 +10448,7 @@
     zh-Hant = 今天
 
   [opens_tomorrow_at]
+    tags = ios
     en = Opens tomorrow at %@
     be = Адкрыццё заўтра ў %@
     ca = Obre demà a les %@
@@ -10431,12 +10457,15 @@
     eu = Bihar %@ean irekiko da
     fr = Ouvre demain à %@
     it = Apre domani alle %@
+    nl = Opent morgen om %@
+    pl = Otwarcie jutro o %@
     pt = Abre amanhã às %@
     ru = Откроется завтра в %@
     tr = Açılış yarın %@
     uk = Відкриття завтра о %@
 
   [opens_dayoftheweek_at]
+    tags = ios
     en = Opens %1$@ at %2$@
     be = Адкрыццё ў %1$@ у %2$@
     ca = Obre el %1$@ a les %2$@
@@ -10445,12 +10474,15 @@
     eu = %1$@ean %2$@ean irekiko da
     fr = Ouvre le %1$@ à %2$@
     it = Apre %1$@ alle %2$@
+    nl = Opent %1$@ om %2$@
+    pl = Otwarcie %1$@ o %2$@
     pt = Abre %1$@ às %2$@
     ru = Открывается в %1$@ в %2$@
     tr = Açılış %1$@ %2$@
     uk = Відчиняється в %1$@ о %2$@
 
   [opens_at]
+    tags = ios
     en = Opens at %@
     be = Адкрыццё ў %@
     ca = Obre a les %@
@@ -10459,12 +10491,15 @@
     eu = %@ean irekiko da
     fr = Ouvre à %@
     it = Apre alle %@
+    nl = Opent om %@
+    pl = Otwarcie o %@
     pt = Abre às %@
     ru = Открывается в %@
     tr = Açılış %@
     uk = Відкриття о %@
 
   [opens_in]
+    tags = android,ios
     en = Opens in %@
     ar = يفتح بعد %@
     be = Адчыняецца праз %@
@@ -10474,12 +10509,15 @@
     eu = %@ barru irekitzen da
     fr = Ouvert dans %@
     it = Apre tra %@
+    nl = Opent over %@
+    pl = Otwarcie za %@
     pt-BR = Abre em %@
     ru = Открывается через %@
     tr = %@ sonra açılıyor
     uk = Відкривається через %@
 
   [closes_at]
+    tags = ios
     en = Closes at %@
     be = Зачыняецца ў %@
     ca = Tanca a les %@
@@ -10488,12 +10526,15 @@
     eu = %@ean itxiko da
     fr = Ferme à %@
     it = Chiude alle %@
+    nl = Sluit om %@
+    pl = Zamknięcie o %@
     pt = Encerra às %@
     ru = Закрывается в %@
     tr = Kapanış %@
     uk = Закривається о %@
 
   [closes_in]
+    tags = android,ios
     en = Closes in %@
     ar = يغلق في غضون %@
     be = Зачыняецца праз %@
@@ -10503,6 +10544,8 @@
     eu = %@ barru ixten da
     fr = Fermé dans %@
     it = Chiude tra %@
+    nl = Sluit over %@
+    pl = Zamknięcie za %@
     pt-BR = Fecha em %@
     ru = Закроется через %@
     tr = %@ sonra kapanıyor
@@ -10662,20 +10705,20 @@
 
   [register_at_openstreetmap]
     tags = android,ios
-    en = Register at OSM
+    en = Register at OpenStreetMap
     ar = التسجيل في حريطة الشارع المفتوحة
     be = Зарэгістравацца на OpenStreetMap
-    bg = Регистриране в OSM
-    ca = Registre a OSM
+    bg = Регистриране в OpenStreetMap
+    ca = Registre a OpenStreetMap
     cs = Registrace
     da = Tilmeld dig
     de = Registrieren
-    el = Εγγραφείτε στο OSM
-    es = Registrarse en OSM
-    eu = Eman izena OSM
-    fa = ثبت نام در OSM
+    el = Εγγραφείτε στο OpenStreetMap
+    es = Registrarse en OpenStreetMap
+    eu = Eman izena OpenStreetMap
+    fa = ثبت نام در OpenStreetMap
     fi = Rekisteröidy
-    fr = Inscription
+    fr = S'inscrire sur OpenStreetMap
     hu = Regisztráció
     id = Mendaftar
     it = Iscriviti
@@ -10685,14 +10728,14 @@
     nb = Registrer deg
     nl = Registeren
     pl = Zarejestruj się
-    pt = Crie uma conta no OSM
-    pt-BR = Abra uma conta no OSM
+    pt = Crie uma conta no OpenStreetMap
+    pt-BR = Abra uma conta no OpenStreetMap
     ro = Înscrie-te
     ru = Зарегистрироваться
     sk = Zaregistrovať sa
     sv = Registrera
     th = ลงทะเบียน
-    tr = Kaydol
+    tr = OpenStreetMap'e kaydol
     uk = Зареєструватися
     vi = Đăng ký
     zh-Hans = 注册
@@ -10811,6 +10854,44 @@
     vi = Đăng nhập
     zh-Hans = 登录
     zh-Hant = 登入
+
+  [login_osm]
+    tags = android
+    en = Login to OpenStreetMap
+    ar = OpenStreetMap ﻰﻟﺇ ﻝﻮﺧﺪﻟﺍ ﻞﻴﺠﺴﺗ
+    be = Увайсці ў OpenStreetMap
+    bg = Влезте в OpenStreetMap
+    cs = Přihlaste se do OpenStreetMap
+    da = Log ind på OpenStreetMap
+    de = Melden Sie sich bei OpenStreetMap an
+    el = Συνδεθείτε στο OpenStreetMap
+    es = Iniciar sesión en OpenStreetMap
+    eu = Hasi saioa OpenStreetMap-en
+    fa = ﺪﯾﻮﺷ OpenStreetMap ﺩﺭﺍﻭ
+    fi = Kirjaudu OpenStreetMapiin
+    fr = Se connecter à OpenStreetMap
+    he = OpenStreetMap-ל סנכיה
+    hu = Jelentkezzen be az OpenStreetMap-be
+    id = Masuk ke OpenStreetMap
+    it = Accedi a OpenStreetMap
+    ja = OpenStreetMapにログイン
+    ko = OpenStreetMap에 로그인
+    nb = Logg på OpenStreetMap
+    nl = Inloggen op OpenStreetMap
+    pl = Zaloguj się do OpenStreetMap
+    pt = Entrar no OpenStreetMap
+    pt-BR = Entrar no OpenStreetMap
+    ro = Conectați-vă la OpenStreetMap
+    ru = Войти в OpenStreetMap
+    sk = Prihláste sa do OpenStreetMap
+    sv = Logga in på OpenStreetMap
+    sw = Ingia kwa OpenStreetMap
+    th = เข้าสู่ระบบ OpenStreetMap
+    tr = OpenStreetMap'e giriş yap
+    uk = Увійдіть до OpenStreetMap
+    vi = Đăng nhập vào OpenStreetMap
+    zh-Hans = 登录 OpenStreetMap
+    zh-Hant = 登錄 OpenStreetMap
 
   [password]
     tags = android
@@ -11004,7 +11085,7 @@
     zh-Hant = 上次上傳
 
   [thank_you]
-    tags = android,ios
+    tags = ios
     en = Thank You
     ar = شكراً لك
     be = Дзякуй
@@ -11326,6 +11407,8 @@
     fa = ﺪﯿﻨﮐ ﺩﺭﺍﻭ ﺍﺭ ﻥﺎﺑﺎﯿﺧ ﻡﺎﻧ
     it = Inserire il nome della via
     mr = कृपया रस्त्याचे नाव जोडा
+    nl = Voer een straatnaam in a.u.b.
+    pl = Proszę wpisz nazwę ulicy
     pt-BR = Por favor, digite o nome da rua
     ro = Introdu numele străzii
     ru = Введите название улицы
@@ -11607,6 +11690,7 @@
     fr = Ajouter un numéro de téléphone
     it = Aggiungi numero
     mr = फोन जोडा
+    nl = Telefoonnummer toevoegen
     pl = Dodaj numer telefonu
     ro = Adaugă un număr
     ru = Добавить телефон
@@ -12602,11 +12686,49 @@
     zh-Hans = 对象无法设置在这里
     zh-Hant = 物件無法設置在這裡
 
+  [osm_presentation]
+    tags = android
+    en = All map data comes from the OpenStreetMap project. It is like Wikipedia for maps where you can add or edit places, and they become available to millions of users all over the World.
+    ar = .ﻢﻟﺎﻌﻟﺍ ءﺎﺤﻧﺃ ﻊﻴﻤﺟ ﻲﻓ ﻦﻴﻣﺪﺨﺘﺴﻤﻟﺍ ﻦﻴﻳﻼﻤﻟ ﺔﺣﺎﺘﻣ ﺢﺒﺼﺗﻭ ، ﺎﻬﻠﻳﺪﻌﺗ ﻭﺃ ﻦﻛﺎﻣﻷﺍ ﺔﻓﺎﺿﺇ
+    be = Усе дадзеныя карты паходзяць з праекта OpenStreetMap. Гэта як Wikipedia для карт, дзе вы можаце дадаваць або рэдагаваць месцы, і яны становяцца даступнымі для мільёнаў карыстальнікаў па ўсім свеце.
+    bg = Всички картографски данни идват от проекта OpenStreetMap. Това е като Wikipedia за карти, където можете да добавяте или редактирате места и те стават достъпни за милиони потребители по целия свят.
+    cs = Všechna mapová data pocházejí z projektu OpenStreetMap. Je to jako Wikipedie s mapami, kde můžete přidávat nebo upravovat místa a jsou dostupné milionům uživatelů po celém světě.
+    da = Alle kortdata kommer fra OpenStreetMap-projektet. Det er ligesom Wikipedia for kort, hvor du kan tilføje eller redigere steder, og de bliver tilgængelige for millioner af brugere over hele verden.
+    de = Alle Kartendaten stammen aus dem OpenStreetMap-Projekt. Es ist wie Wikipedia für Karten, wo Sie Orte hinzufügen oder bearbeiten können, und sie werden Millionen von Benutzern auf der ganzen Welt zur Verfügung gestellt.
+    el = Όλα τα δεδομένα χάρτη προέρχονται από το έργο OpenStreetMap. Μοιάζει με τη Wikipedia για χάρτες όπου μπορείτε να προσθέσετε ή να επεξεργαστείτε μέρη και γίνονται διαθέσιμα σε εκατομμύρια χρήστες σε όλο τον κόσμο.
+    es = Todos los datos del mapa provienen del proyecto OpenStreetMap. Es como Wikipedia para mapas donde puedes agregar o editar lugares, y están disponibles para millones de usuarios en todo el mundo.
+    eu = Maparen datu guztiak OpenStreetMap proiektutik datoz. Tokiak gehitu edo edita ditzakezun mapetarako Wikipedia bezalakoa da, eta mundu osoko milioika erabiltzaileren eskura jartzen dira.
+    fa = .ﺪﻧﺮﯿﮔu200cﯽﻣ ﺭﺍﺮﻗ ﺱﺮﺘﺳﺩ ﺭﺩ ﻥﺎﻬﺟ ﺮﺳﺍﺮﺳ ﺭﺩ ﺮﺑﺭﺎﮐ ﺎﻫu200cﻥﻮﯿﻠﯿﻣ ﯼﺍﺮﺑ ﺎﻫu200cﻥﺁ ﻭ
+    fi = Kaikki karttatiedot tulevat OpenStreetMap-projektista. Se on kuin karttojen Wikipedia, jossa voit lisätä tai muokata paikkoja, ja ne ovat miljoonien käyttäjien saatavilla kaikkialla maailmassa.
+    fr = Toutes les données géographiques proviennent du projet OpenStreetMap. Le principe est similaire à Wikipedia: vous pouvez ajouter et modifier des lieux et ils deviendront accessibles à des millions d'utilisateurs partout dans le monde.
+    he = .םלועה יבחר לכב םישמתשמ ינוילימל תונימזל תוכפוה ןהו ,תומוקמ ךורעל וא ףיסוהל לו
+    hu = Minden térképadat az OpenStreetMap projektből származik. Olyan ez, mint a Wikipédia a térképekhez, ahol helyeket adhat hozzá vagy szerkeszthet, és a felhasználók milliói számára válnak elérhetővé szerte a világon.
+    id = Semua data peta berasal dari proyek OpenStreetMap. Ini seperti Wikipedia untuk peta tempat Anda dapat menambahkan atau mengedit tempat, dan peta tersebut tersedia bagi jutaan pengguna di seluruh Dunia.
+    it = Tutti i dati della mappa provengono dal progetto OpenStreetMap. È come Wikipedia per le mappe in cui puoi aggiungere o modificare luoghi e diventano disponibili per milioni di utenti in tutto il mondo.
+    ja = すべての地図データは、OpenStreetMap プロジェクトから取得されます。場所を追加または編集できる地図のウィキペディアのようなもので、世界中の何百万人ものユーザーが利用できるようになります。
+    ko = 모든 지도 데이터는 OpenStreetMap 프로젝트에서 가져옵니다. ""장소를 추가하거나 편집할 수 있는 지도용 Wikipedia와 같으며 전 세계 수백만 사용자가 사용할 수 있습니다.
+    nb = Alle kartdata kommer fra OpenStreetMap-prosjektet. Det er som Wikipedia for kart hvor du kan legge til eller redigere steder, og de blir tilgjengelige for millioner av brukere over hele verden.
+    nl = Alle kaartgegevens komen uit het OpenStreetMap-project. Het is als Wikipedia voor kaarten waar je plaatsen kunt toevoegen of bewerken, en ze worden beschikbaar voor miljoenen gebruikers over de hele wereld.
+    pl = Wszystkie dane mapy pochodzą z projektu OpenStreetMap. Przypomina Wikipedię z mapami, w których można dodawać lub edytować miejsca, a stają się one dostępne dla milionów użytkowników na całym świecie.
+    pt = Todos os dados cartográficos provêm do projecto OpenStreetMap. É como a Wikipedia para mapas onde se podem adicionar ou editar locais, e estes ficam disponíveis para milhões de utilizadores em todo o mundo.
+    pt-BR = Todos os dados do mapa são provenientes do projeto OpenStreetMap. É como a Wikipedia para mapas onde você pode adicionar ou editar lugares, e eles ficam disponíveis para milhões de usuários em todo o mundo.
+    ro = Toate datele hărții provin din proiectul OpenStreetMap. Este ca Wikipedia pentru hărți în care puteți adăuga sau edita locuri și acestea devin disponibile pentru milioane de utilizatori din întreaga lume.
+    ru = Все данные карты поступают из проекта OpenStreetMap. Это как Википедия для карт, где вы можете добавлять или редактировать места, и они становятся доступными для миллионов пользователей по всему миру.
+    sk = Všetky mapové podklady pochádzajú z projektu OpenStreetMap. Je to ako Wikipedia pre mapy, kde môžete pridávať alebo upravovať miesta a sú dostupné pre milióny používateľov na celom svete.
+    sv = All kartdata kommer från OpenStreetMap-projektet. Det är som Wikipedia för kartor där du kan lägga till eller redigera platser, och de blir tillgängliga för miljontals användare över hela världen.
+    sw = Data yote ya ramani inatoka kwa mradi wa OpenStreetMap. Ni kama Wikipedia ya ramani ambapo unaweza kuongeza au kuhariri maeneo, na yanapatikana kwa mamilioni ya watumiaji duniani kote.
+    th = ข้อมูลแผนที่ทั้งหมดมาจากโครงการ OpenStreetMap เหมือนกับวิกิพีเดียสำหรับแผนที่ที่คุณสามารถเพิ่มหรือแก้ไขสถานที่ได้ และพวกเขาพร้อมให้ผู้ใช้หลายล้านคนทั่วโลกใช้งานได้
+    tr = Tüm harita verileri OpenStreetMap projesinden geliyor. Bu proje Vikipedi'nin harita sürümü gibidir, yer ekleyerek veya düzenleyerek tüm dünyadaki milyonlarca kullanıcı gibi bu harita verilerinin gelişmesine katkıda bulunabilirsiniz.
+    uk = Усі картографічні дані надходять із проекту OpenStreetMap. Це як Wikipedia для карт, де ви можете додавати або редагувати місця, і вони стають доступними для мільйонів користувачів у всьому світі.
+    vi = Tất cả dữ liệu bản đồ đến từ dự án OpenStreetMap. Nó giống như Wikipedia dành cho bản đồ nơi bạn có thể thêm hoặc chỉnh sửa các địa điểm và chúng có sẵn cho hàng triệu người dùng trên khắp Thế giới.
+    zh-Hans = 所有地图数据均来自 OpenStreetMap 项目。它就像 Wikipedia 中的地图，您可以在其中添加或编辑地点，并且它们可供全球数百万用户使用。
+    zh-Hant = 所有地圖數據均來自 OpenStreetMap 項目。它就像 Wikipedia 中的地圖，您可以在其中添加或編輯地點，並且它們可供全球數百萬用戶使用。
+
   [login_to_make_edits_visible]
     tags = android,ios
-    en = Log in so other users can see the changes that you have made
+    en = Log in to OpenStreetMap.org so other users can see the changes you have made.
     ar = قم بتسجيل الدخول حتى يتمكن باقي المستخدمين من رؤية التغييرات التي قمت بها.
-    be = Аўтарызуйцеся, каб іншыя карыстальнікі бачылі вашыя змены.
+    be = Аўтарызуйцеся ў OpenStreetMap.org, каб іншыя карыстальнікі бачылі вашыя змены.
     bg = Влезте в системата, за да могат другите потребители да видят направените от вас промени
     ca = Inicieu sessió perquè altres usuaris puguin veure els canvis que heu fet
     cs = Přihlaste se, aby ostatní uživatelé mohli vidět změny, které jste provedli.
@@ -12617,7 +12739,7 @@
     eu = Hasi saioa beste erabiltzaileek zuk egindako aldaketak ikus ditzaten.
     fa = وارد شوید تا دیگر کاربران نیز بتوانند تغییرات ایجاد شده توسط شما را ببینند
     fi = Kirjaudu sisään jotta muut käyttäjät voivat nähdä tekemäsi muokkaukset.
-    fr = Se connecter pour que d'autres utilisateurs puissent voir les changements que vous avez effectués.
+    fr = Connectez vous à votre compte openstreetmap.org pour que d'autres utilisateurs puissent voir vos changements.
     hu = Jelentkezz be, hogy más felhasználók is láthassák a változtatásaidat.
     id = Masuk agar pengguna lain dapat melihat perubahan yang Anda buat.
     it = Accedi per consentire ad altri utenti di vedere le modifiche apportate.
@@ -12630,12 +12752,12 @@
     pt = Inicie a sessão para que outros utilizadores vejam as alterações que fez.
     pt-BR = Fazer login para que outros usuários vejam as mudanças que você fez.
     ro = Autentifică-te pentru ca modificările pe care le-ai făcut să poată fi văzute și de alți utilizatori.
-    ru = Войдите, чтобы ваши изменения увидели другие пользователи.
+    ru = Авторизуйтесь в OpenStreetMap.org, чтобы ваши изменения увидели другие пользователи.
     sk = Prihláste sa, aby mohli ostatní užívatelia vidieť Vami vykonané zmeny.
     sv = Logga in så att andra användare kan se de ändringar du gjort.
     th = ล็อกอินเพื่อให้ผู้ใช้คนอื่นสามารถเห็นการเปลี่ยนแปลงของคุณได้
-    tr = Diğer kullanıcıların yaptığınız değişiklikleri görebilmesi için oturum açın
-    uk = Увійдіть, щоб ваші зміни побачили інші користувачі.
+    tr = Diğer kullanıcıların yaptığınız değişiklikleri görebilmesi için OpenStreetMap.org'da oturum açın.
+    uk = Увійдіть у OpenStreetMap.org, щоб ваші зміни побачили інші користувачі.
     vi = Đăng nhập để người dùng khác có thể nhìn thấy những thay đổi bạn đã thực hiện.
     zh-Hans = 登录，让其他用户能看到您所作出的修改。
     zh-Hant = 登入來讓其他使用者能看到您所作出的修改。
@@ -14115,46 +14237,6 @@
     zh-Hans = 更多
     zh-Hant = 更多
 
-  [placepage_more_reviews_button]
-    tags = android
-    en = More Reviews
-    ar = المزيد من المراجعات
-    be = Больш водгукаў
-    bg = Още отзиви
-    ca = Més comentaris
-    cs = Více recenzí
-    da = Flere anmeldelser
-    de = Mehr Feedbacks
-    el = Περισσότερα σχόλια
-    es = Más comentarios
-    es-MX = Más comentarios
-    eu = Iruzkin gehiago
-    fa = نقدهای دیگر
-    fi = Lisää arvosteluja
-    fr = Plus d'avis
-    hu = További vélemények
-    id = Ulasan Lainnya
-    it = Altre recensioni
-    ja = レビューを更に表示
-    ko = 더 많은 리뷰
-    mr = अधिक समीक्षणे
-    nb = Flere anmeldelser
-    nl = Meer reacties
-    pl = Więcej opinii
-    pt = Mais comentários
-    pt-BR = Mais avaliações
-    ro = Mai multe recenzii
-    ru = Ещё отзывы
-    sk = Ďalšie recenzie
-    sv = Fler recensioner
-    sw = Maoni Zaidi
-    th = รีวิวอื่น ๆ
-    tr = Diğer Yorumlar
-    uk = Ще відгуки
-    vi = Thêm nhận xét
-    zh-Hans = 更多评论
-    zh-Hant = 更多評論
-
   [book_button]
     tags = ios
     en = Book
@@ -14656,6 +14738,8 @@
     de = Geben Sie bitte den Grund für die Löschung an
     it = Indicare il motivo dell' eliminazione del luogo
     mr = कृपया ठिकाण हटवण्याचे कारण सूचित करा
+    nl = Graag de reden voor verwijdering aangeven
+    pl = Proszę opisz powód usunięcia miejsca
     pt-BR = Por favor, explica o motivo pelo qual você está retirando o local
     ro = Indică motivul pentru care ai eliminat locul
     ru = Пожалуйста, укажите причину удаления
@@ -14826,6 +14910,7 @@
     fr = Saisissez une adresse web, un compte ou un nom de page Facebook valide
     it = Inserisci un indirizzo web, un account o un nome di pagina Facebook valido
     mr = वैध Facebook वेब पत्ता, खाते किंवा पृष्ठ नाव प्रविष्ट करा
+    nl = Voer een geldig Facebook-webadres, een accountnaam of een paginanaam in
     pl = Wprowadź poprawny link, nazwę konta lub nazwę strony na Facebooku
     ro = Introdu o adresă web, un cont sau un nume de pagină Facebook valabil
     ru = Введите корректный веб-адрес Facebook страницы или имя пользователя
@@ -14844,6 +14929,7 @@
     fr = Saisissez une adresse web, un nom de compte Instagram valide
     it = Inserisci un indirizzo web o un nome di account Instagram valido
     mr = वैध Instagram वेब पत्ता किंवा खाते नाव प्रविष्ट करा
+    nl = Voer een geldig Instagram-webadres of een accountnaam in
     pl = Wprowadź poprawny link lub nazwę konta na Instagramie
     ro = Introdu o adresă web sau un nume de cont Instagram valabil
     ru = Введите корректный веб-адрес Instagram страницы или имя пользователя
@@ -14862,6 +14948,7 @@
     fr = Saisissez une adresse web, un nom de compte Twitter valide
     it = Inserisci un indirizzo web o un nome utente Twitter valido
     mr = वैध Twitter वेब पत्ता किंवा वापरकर्तानाव प्रविष्ट करा
+    nl = Voer een geldig Twitter-webadres of een gebruikersnaam in
     pl = Wprowadź poprawny adres lub nazwę konta na Twitterze
     ro = Introdu o adresă web sau un nume de utilizator Twitter valabil
     ru = Введите корректный веб-адрес Twitter страницы или имя пользователя
@@ -14879,6 +14966,7 @@
     eu = Mesedez, idatzi baliozko web helbide bat edo VK kontuaren izena
     fr = Saisissez une adresse web, un nom de compte VK valide
     it = Inserisci un indirizzo web o un nome di account VK valido
+    nl = Voer een geldig VB webadres of een accountnaam in
     pl = Wprowadź poprawny adres lub nazwę konta na VK
     ro = Introdu o adresă web sau un nume de cont VK valabil
     ru = Введите корректный веб-адрес VK страницы или имя пользователя
@@ -14894,6 +14982,8 @@
     ca = Introduïu una adreça web de LINE o un ID LINE vàlids
     de = Geben Sie eine gültige LINE-Webadresse oder LINE ID ein
     it = Inserisca un indirizzo web LINE valido o un ID LINE
+    nl = Voer een geldig LINE-webadres of een LINE ID in
+    pl = Wpisz prawidłowy url LINE lub LINE ID
     ro = Introdu o adresă web LINE valabilă sau un ID LINE
     ru = Введите корректный веб-адрес LINE страницы или LINE ID
     tr = Geçerli bir LINE web adresi veya LINE ID'si girin
@@ -15015,7 +15105,7 @@
     zh-Hant = 您想要發給所有用戶嗎？
 
   [editor_share_to_all_dialog_message_1]
-    comment = iOS Dialog before publishing the modifications to the public map.
+    comment = Dialog before publishing the modifications to the public map.
     tags = android,ios
     en = Make sure you did not enter any personal data.
     ar = تأكد من أنك لم تقم بإدخال أية بيانات شخصية.
@@ -15055,41 +15145,42 @@
 
   [editor_share_to_all_dialog_message_2]
     tags = android,ios
-    en = We will check the changes. If we have any questions we will contact you via email.
-    ar = سنقوم بمراجعة هذه التغييرات. إذا كانت لدينا أي أسئلة فسننتواصل معك عبر البريد الإلكتروني.
-    be = Мы праверым змены. Калі ў нас з'явяцца пытанні, мы з вамі звяжамся праз email.
-    bg = Ще проверим промените. Ако имаме някакви въпроси, ще се свържем с вас по имейл.
+    en = OpenStreetMap editors will check the changes and get in contact with you if they have any questions.
+    ar = .ﺔﻠﺌﺳﺃ ﻱﺃ ﻢﻬﻳﺪﻟ ﻥﺎﻛ ﺍﺫﺇ ﻚﻌﻣ ﻥﻮﻠﺻﺍﻮﺘﻳﻭ ﺕﺍﺮﻴﻴﻐﺘﻟﺍ ﻦﻣ OpenStreetMap ﻭﺭﺮﺤﻣ ﻖﻘﺤﺘﻴﺳ
+    be = Рэдактары OpenStreetMap правераць змены і звяжуцца з вамі, калі ў іх узнікнуць пытанні.
+    bg = Редакторите на OpenStreetMap ще проверят промените и ще се свържат с вас, ако имат въпроси.
     ca = Revisarem els canvis. Si tenim cap pregunta contactem amb vós via correu electrònic.
-    cs = Změny ověříme. Budeme-li k vám mít jakékoli dotazy, budeme vás kontaktovat prostřednictvím emailu.
-    da = Vi vil kigge på ændringerne. Hvis vi har spørgsmål, vil vi kontakte dig via email.
-    de = Wir werden die Änderungen prüfen. Wenn wir Fragen haben, werden wir Sie per Email kontaktieren.
-    el = Θα ελέγξουμε τις αλλαγές. Εάν έχουμε οποιαδήποτε απορία θα επικοινωνήσουμε μαζί σας μέσω email.
-    es = Comprobaremos los cambios. Si tenemos alguna pregunta, te contactaremos por correo electrónico.
-    eu = Aldaketak egiaztatuko ditugu. Edozein zalantza izanez gero, zurekin harremanetan jarriko gara posta elektronikoz.
-    fa = ما تغییرات را بررسی می کنیم.اگر سوالی بود با ایمیل با شما تماس می گیریم.
-    fi = Tarkistamme muutokset. Otamme sinuun yhteyttä sähköpostitse, jos meillä on kysyttävää.
-    fr = Nous vérifierons les changements. Si nous avons des questions quelles qu’elles soient, nous vous contacterons par courriel.
-    hu = Ellenőrizni fogjuk a változásokat. Ha bármilyen kérdésünk van, emailben keresünk.
-    id = Kami akan memeriksa perubahan tersebut. Jika kami memiliki pertanyaan maka kami akan menghubungi Anda melalui surel.
-    it = Controlleremo le modifiche. Se avremo delle domande, ti contatteremo via e-mail.
-    ja = 弊社で変更を確認します。質問がある場合はメールでご連絡します。
-    ko = 저희가 변경 사항을 확인할 것입니다. 질문이 있으신 경우, 저희에게 이메일을 통해 연락하십시오.
-    mr = आम्ही बदल तपासू. आम्हाला काही प्रश्न असल्यास आम्ही ईमेलद्वारे तुमच्याशी संपर्क साधू.
-    nb = Vi vil sjekke endringene. Vi kontakter deg via e-post dersom vi har spørsmål.
-    nl = We zullen de wijzigingen controleren. Als we nog vragen hebben, zullen we contact met je opnemen via email.
-    pl = Zapoznamy się ze zmianami. W przypadku pytań skontaktujemy się z Tobą przez email.
-    pt = Vamos verificar as alterações. Se tivermos alguma pergunta, vamos contactá-lo por email.
-    pt-BR = Verificaremos as alterações. Se tivermos perguntas, entraremos em contato com você por email.
-    ro = Vom verifica modificările. Dacă vor apărea întrebări, te vom contacta prin e-mail.
-    ru = Если при проверке изменений возникнут вопросы, мы напишем вам на email.
-    sk = Skontrolujeme zmeny. V prípade otázok vás budeme kontaktovať emailom.
-    sv = Vi kommer att kontrollera ändringar. Om vi har några frågor kontaktar vi dig via e-post.
-    th = เราจะตรวจสอบการเปลี่ยนแปลง หากเรามีคำถามใด ๆ เราจะติดต่อคุณผ่านทางอีเมล
-    tr = Değişikliği kontrol edeceğiz. Eğer herhangi bir sorumuz olursa sizinle e-posta aracılığıyla iletişime geçeceğiz.
-    uk = Якщо при перевірці змін виникнуть питання, ми напишемо вам на email.
-    vi = Chúng tôi sẽ kiểm tra những thay đổi. Nếu chúng tôi có câu hỏi nào, chúng tôi sẽ liên lạc với bạn qua email.
-    zh-Hans = 我们会检查更改。如果我们有任何问题，我们会邮件与您联系。
-    zh-Hant = 我們會檢查更改。如果我們有任何問題，我們會郵件與您聯絡。
+    cs = Redaktoři OpenStreetMap zkontrolují změny a budou vás kontaktovat, pokud budou mít nějaké dotazy.
+    da = OpenStreetMap-redaktører vil tjekke ændringerne og kontakte dig, hvis de har spørgsmål.
+    de = OpenStreetMap-Redakteure werden die Änderungen prüfen und sich bei Fragen mit Ihnen in Verbindung setzen.
+    el = Οι συντάκτες του OpenStreetMap θα ελέγξουν τις αλλαγές και θα επικοινωνήσουν μαζί σας εάν έχουν απορίες.
+    es = Los editores de OpenStreetMap comprobarán los cambios y se pondrán en contacto contigo si tienen alguna pregunta.
+    eu = OpenStreetMap editoreek aldaketak egiaztatuko dituzte eta zurekin harremanetan jarriko dira zalantzaren bat izanez gero.
+    fa = .ﺖﻓﺮﮔ ﺪﻨﻫﺍﻮﺧ ﺱﺎﻤﺗ ﺎﻤﺷ ﺎﺑ ﻝﺍﻮﺳ ﻪﻧﻮﮔﺮﻫ ﻦﺘﺷﺍﺩ ﺕﺭﻮﺻ ﺭﺩ ﻭ ﻩﺩﺮﮐ ﯽﺳﺭﺮﺑ ﺍﺭ ﺕﺍﺮﯿﯿﻐﺗ Ope
+    fi = OpenStreetMap-editorit tarkistavat muutokset ja ottavat sinuun yhteyttä, jos heillä on kysyttävää.
+    fr = Les éditeurs d'OpenStreetMap vérifieront vos modifications et vous contacteront s'ils ont des questions.
+    he = .ןהשלכ תולאש םהל שי םא רשק ךתיא ורציו םייונישה תא וקדבי OpenStreetMap יכרוע
+    hu = Az OpenStreetMap szerkesztői ellenőrzik a változásokat, és felveszik Önnel a kapcsolatot, ha kérdéseik vannak.
+    id = Editor OpenStreetMap akan memeriksa perubahan dan menghubungi Anda jika ada pertanyaan.
+    it = Gli editori di OpenStreetMap controlleranno le modifiche e si metteranno in contatto con te in caso di domande.
+    ja = OpenStreetMap の編集者が変更を確認し、質問があれば連絡します。
+    ko = OpenStreetMap 편집자가 변경 사항을 확인하고 질문이 있는 경우 귀하에게 연락할 것입니다.
+    nb = OpenStreetMap-redaktører vil sjekke endringene og ta kontakt med deg hvis de har spørsmål.
+    nl = OpenStreetMap-editors zullen de wijzigingen controleren en contact met u opnemen als ze vragen hebben.
+    pl = Redaktorzy OpenStreetMap sprawdzą zmiany i skontaktują się z Tobą, jeśli będą mieli jakiekolwiek pytania.
+    pt = Os editores do OpenStreetMap verificarão as alterações e entrarão em contacto consigo se tiverem alguma dúvida.
+    pt-BR = Os editores do OpenStreetMap verificarão as mudanças e entrarão em contato com você se tiverem alguma dúvida.
+    ro = Editorii OpenStreetMap vor verifica modificările și vor lua legătura cu dvs. dacă au întrebări.
+    ru = Редакторы OpenStreetMap проверят изменения и свяжутся с вами, если у них возникнут вопросы.
+    sk = Redaktori OpenStreetMap skontrolujú zmeny a budú vás kontaktovať, ak budú mať nejaké otázky.
+    sv = OpenStreetMap-redigerare kommer att kontrollera ändringarna och kontakta dig om de har några frågor.
+    sw = Wahariri wa OpenStreetMap watakagua mabadiliko na kuwasiliana nawe ikiwa wana maswali yoyote.
+    th = ผู้แก้ไข OpenStreetMap จะตรวจสอบการเปลี่ยนแปลงและติดต่อคุณหากมีคำถามใดๆ
+    tr = OpenStreetMap editörleri değişikliklerinizi kontrol edecek ve bir soruları olursa sizinle iletişime geçecekler.
+    uk = Редактори OpenStreetMap перевірять зміни та зв’яжуться з вами, якщо у них виникнуть запитання.
+    vi = Các biên tập viên của OpenStreetMap sẽ kiểm tra các thay đổi và liên hệ với bạn nếu họ có bất kỳ câu hỏi nào.
+    zh-Hans = OpenStreetMap 编辑人员将检查更改并在有任何问题时与您联系。
+    zh-Hant = OpenStreetMap 編輯人員將檢查更改並在有任何問題時與您聯繫。
 
   [navigation_stop_button]
     tags = ios
@@ -15440,7 +15531,7 @@
 
   [search_in_table]
     comment = A noun - a button name used to show search results in list form
-    tags = android,ios
+    tags = ios
     en = List
     ar = قائمة
     be = Спіс
@@ -16014,7 +16105,7 @@
 
   [feedback_general]
     comment = Settings: "Send general feedback" button
-    tags = android,ios
+    tags = android
     en = General Feedback
     ar = تعقيب عام
     be = Агульны водгук
@@ -18915,6 +19006,7 @@
     fr = Populaire
     it = Popolare
     mr = लोकप्रिय
+    nl = Populair
     pl = Popularne
     pt = Popular
     pt-BR = Popular
@@ -23787,6 +23879,7 @@
     fr = Télécharger la carte du monde
     it = Scarica la mappa del mondo
     mr = जगाचा नकाशा डाउनलोड करा
+    nl = Download de wereldkaart
     pl = Pobierz mapę świata
     pt = Descarregar o mapa mundial
     pt-BR = Baixar mapa mundial
@@ -23803,6 +23896,8 @@
     de = Ordner kann nicht erstellt und Dateien können nicht auf den Gerätespeicher oder die SD-Karte verschoben werden
     fr = Impossible de créer un dossier et de déplacer des fichiers sur la mémoire interne de l'appareil ou sur la carte SD
     mr = उपकरणाच्या अंतर्गत मेमरी किंवा SD-card वर फोल्डर तयार करण्यात आणि फायली हलविण्यात अक्षम
+    nl = Het lukt niet om een map aan te maken en bestanden naar het interne geheugen of een SD-kaart te verplaatsen
+    pl = Nie udało się stworzyć folderu i przenieść plików do pamięci wewnętrznej lub karty SD
     pt-BR = Não foi possível criar a pasta e mover os arquivos à memória interna ou sdcard do dispositivo
     ru = Не могу создать папку и переместить файлы на устройстве
     tr = Dahili aygıtın belleğinde veya SD kartta klasör oluşturulamıyor ve dosyalar taşınamıyor
@@ -23815,6 +23910,8 @@
     ca = Error de disc
     de = Speicherfehler
     mr = डिस्क त्रुटी
+    nl = Schijffout
+    pl = Błąd pamięci
     pt-BR = Erro do armazenamento
     ru = Ошибка диска
     tr = Disk hatası
@@ -23834,6 +23931,7 @@
     fr = Erreur de connexion
     it = Errore di connessione
     mr = जोडणी अयशस्वी
+    nl = Verbindingsfout
     pl = Błąd połączenia
     pt = Falha na coneção
     pt-BR = Falha na coneção
@@ -23855,6 +23953,7 @@
     fr = Déconnectez le câble USB
     it = Scollegare il cavo USB
     mr = USB केबल काढा
+    nl = USB-kabel losmaken
     pl = Odłącz kabel USB
     pt-BR = Desconecte o cabo USB
     ro = Deconectează cablul USB
@@ -24173,6 +24272,7 @@
     fr = Supprimer la route
     it = Elimina percorso
     mr = ट्रॅक पुसून टाका
+    nl = Verwijder traject
     pl = Usuwanie trasy
     pt-BR = Apagar rota
     ro = Elimină traseul
@@ -24194,6 +24294,7 @@
     fr = Nom de la route
     it = Nome percorso
     mr = ट्रॅकचे नाव
+    nl = Trajectnaam
     pl = Nazwa trasy
     pt-BR = Nome da rota
     ro = Numele traseului
@@ -24215,6 +24316,7 @@
     fr = Déplacer
     it = Sposta
     mr = हलवा
+    nl = Verplaats
     pl = Przenieś
     pt-BR = Mover
     ro = Mută

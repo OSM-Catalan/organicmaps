@@ -65,6 +65,7 @@ import com.mapswithme.util.StringUtils;
 import com.mapswithme.util.ThemeUtils;
 import com.mapswithme.util.UiUtils;
 import com.mapswithme.util.Utils;
+import com.mapswithme.util.bottomsheet.MenuBottomSheetItem;
 import com.mapswithme.util.concurrency.UiThread;
 import com.mapswithme.util.log.Logger;
 
@@ -92,6 +93,7 @@ public class PlacePageView extends NestedScrollViewClickFixed
 
   private boolean mIsDocked;
   private boolean mIsFloating;
+  private int mDescriptionMaxLength;
 
   // Preview.
   private ViewGroup mPreview;
@@ -191,6 +193,8 @@ public class PlacePageView extends NestedScrollViewClickFixed
   private CountryItem mCurrentCountry;
   private boolean mScrollable = true;
 
+  private OnPlacePageContentChangeListener mOnPlacePageContentChangeListener;
+
   private final MapManager.StorageCallback mStorageCallback = new MapManager.StorageCallback()
   {
     @Override
@@ -232,7 +236,7 @@ public class PlacePageView extends NestedScrollViewClickFixed
     @Override
     public void onClick(View v)
     {
-      MapManager.warn3gAndDownload(getActivity(), mCurrentCountry.id, null);
+      MapManager.warn3gAndDownload(requireActivity(), mCurrentCountry.id, null);
     }
   };
 
@@ -540,7 +544,7 @@ public class PlacePageView extends NestedScrollViewClickFixed
     if (mMapObject == null)
     {
       Logger.e(TAG, "A mwm request cannot be handled, mMapObject is null!");
-      getActivity().finish();
+      requireActivity().finish();
       return;
     }
 
@@ -553,10 +557,10 @@ public class PlacePageView extends NestedScrollViewClickFixed
           .putExtra(Const.EXTRA_POINT_NAME, mMapObject.getTitle())
           .putExtra(Const.EXTRA_POINT_ID, mMapObject.getApiId())
           .putExtra(Const.EXTRA_ZOOM_LEVEL, Framework.nativeGetDrawScale());
-      getActivity().setResult(Activity.RESULT_OK, result);
+      requireActivity().setResult(Activity.RESULT_OK, result);
       ParsedMwmRequest.setCurrentRequest(null);
     }
-    getActivity().finish();
+    requireActivity().finish();
   }
 
   private void onRouteFromBtnClicked()
@@ -582,7 +586,7 @@ public class PlacePageView extends NestedScrollViewClickFixed
     }
     else
     {
-      getActivity().startLocationToPoint(getMapObject());
+      requireActivity().startLocationToPoint(getMapObject());
     }
   }
 
@@ -693,6 +697,7 @@ public class PlacePageView extends NestedScrollViewClickFixed
     mIsDocked = attrArray.getBoolean(R.styleable.PlacePageView_docked, false);
     mIsFloating = attrArray.getBoolean(R.styleable.PlacePageView_floating, false);
     attrArray.recycle();
+    mDescriptionMaxLength = getResources().getInteger(R.integer.place_page_description_max_length);
   }
 
   public boolean isDocked()
@@ -801,6 +806,25 @@ public class PlacePageView extends NestedScrollViewClickFixed
     }
   }
 
+  private Spanned getShortDescription(@NonNull MapObject mapObject)
+  {
+    String htmlDescription = mapObject.getDescription();
+    final int paragraphStart = htmlDescription.indexOf("<p>");
+    final int paragraphEnd = htmlDescription.indexOf("</p>");
+    if (paragraphStart == 0 && paragraphEnd != -1)
+      htmlDescription = htmlDescription.substring(3, paragraphEnd);
+
+    Spanned description = Html.fromHtml(htmlDescription);
+    if (description.length() > mDescriptionMaxLength)
+    {
+      description = (Spanned) new SpannableStringBuilder(description)
+          .insert(mDescriptionMaxLength - 3, "...")
+          .subSequence(0, mDescriptionMaxLength);
+    }
+
+    return description;
+  }
+
   private void setPlaceDescription(@NonNull MapObject mapObject)
   {
     boolean isBookmark = MapObject.isOfType(MapObject.BOOKMARK, mapObject);
@@ -818,7 +842,7 @@ public class PlacePageView extends NestedScrollViewClickFixed
       return;
     }
     UiUtils.show(mPlaceDescriptionContainer, mPlaceDescriptionHeaderContainer);
-    mPlaceDescriptionView.setText(Html.fromHtml(mapObject.getDescription()));
+    mPlaceDescriptionView.setText(getShortDescription(mapObject));
   }
 
   private void setTextAndColorizeSubtitle(@NonNull MapObject mapObject)
@@ -1295,12 +1319,12 @@ public class PlacePageView extends NestedScrollViewClickFixed
 
   private void addOrganisation()
   {
-    getActivity().showPositionChooserForEditor(true, false);
+    requireActivity().showPositionChooserForEditor(true, false);
   }
 
   private void addPlace()
   {
-    getActivity().showPositionChooserForEditor(false, true);
+    requireActivity().showPositionChooserForEditor(false, true);
   }
 
   /// @todo
@@ -1328,7 +1352,7 @@ public class PlacePageView extends NestedScrollViewClickFixed
           Logger.e(TAG, "Cannot start editor, map object is null!");
           break;
         }
-        getActivity().showEditor();
+        requireActivity().showEditor();
         break;
       case R.id.ll__add_organisation:
         addOrganisation();
@@ -1398,10 +1422,10 @@ public class PlacePageView extends NestedScrollViewClickFixed
 
   private void showBigDirection()
   {
-    final DirectionFragment fragment = (DirectionFragment) Fragment.instantiate(getActivity(), DirectionFragment.class
+    final DirectionFragment fragment = (DirectionFragment) Fragment.instantiate(requireActivity(), DirectionFragment.class
         .getName(), null);
     fragment.setMapObject(mMapObject);
-    fragment.show(getActivity().getSupportFragmentManager(), null);
+    fragment.show(requireActivity().getSupportFragmentManager(), null);
   }
 
   /// @todo Unify urls processing (fb, twitter, instagram, ...).
@@ -1614,7 +1638,7 @@ public class PlacePageView extends NestedScrollViewClickFixed
     UiUtils.hide(mDownloaderInfo);
   }
 
-  MwmActivity getActivity()
+  MwmActivity requireActivity()
   {
     return (MwmActivity) getContext();
   }
@@ -1628,11 +1652,18 @@ public class PlacePageView extends NestedScrollViewClickFixed
 
     setMapObject(updatedBookmark, null);
     refreshViews();
+    mOnPlacePageContentChangeListener.OnPlacePageContentChange();
   }
 
   int getPreviewHeight()
   {
     return mPreview.getHeight();
+  }
+
+  @Nullable
+  public ArrayList<MenuBottomSheetItem> getMenuBottomSheetItems()
+  {
+    return mButtons.getMenuBottomSheetItems();
   }
 
   private class EditBookmarkClickListener implements OnClickListener
@@ -1648,9 +1679,19 @@ public class PlacePageView extends NestedScrollViewClickFixed
       Bookmark bookmark = (Bookmark) mMapObject;
       EditBookmarkFragment.editBookmark(bookmark.getCategoryId(),
                                         bookmark.getBookmarkId(),
-                                        getActivity(),
-                                        getActivity().getSupportFragmentManager(),
+                                        requireActivity(),
+                                        requireActivity().getSupportFragmentManager(),
                                         PlacePageView.this);
     }
+  }
+
+  public void setOnPlacePageContentChangeListener(OnPlacePageContentChangeListener onPlacePageContentChangeListener)
+  {
+    mOnPlacePageContentChangeListener = onPlacePageContentChangeListener;
+  }
+
+  interface OnPlacePageContentChangeListener
+  {
+    void OnPlacePageContentChange();
   }
 }

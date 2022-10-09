@@ -282,11 +282,11 @@
 /* Text in menu */
 "instagram" = "Instagram";
 
+/* Text in the editor */
+"vk" = "VK";
+
 /* Text in menu */
 "openstreetmap" = "OpenStreetMap";
-
-/* Settings: Send feedback button and dialog title */
-"feedback" = "Palaute";
 
 /* Text in menu */
 "rate_the_app" = "Arvioi sovellus";
@@ -810,10 +810,10 @@
 /* Displayed when saving some edits to the map to warn against publishing personal data */
 "editor_share_to_all_dialog_title" = "Haluatko lähettää sen kaikille käyttäjille?";
 
-/* iOS Dialog before publishing the modifications to the public map. */
+/* Dialog before publishing the modifications to the public map. */
 "editor_share_to_all_dialog_message_1" = "Varmistat, ettet syöttänyt henkilökohtaisia tietojasi.";
 
-"editor_share_to_all_dialog_message_2" = "Tarkistamme muutokset. Otamme sinuun yhteyttä sähköpostitse, jos meillä on kysyttävää.";
+"editor_share_to_all_dialog_message_2" = "OpenStreetMap-editorit tarkistavat muutokset ja ottavat sinuun yhteyttä, jos heillä on kysyttävää.";
 
 "navigation_stop_button" = "lopeta";
 
@@ -867,9 +867,6 @@
 
 /* "traffic" as in "road congestion" */
 "traffic_data_unavailable" = "Liikennetietoja ei ole saatavilla";
-
-/* Settings: "Send general feedback" button */
-"feedback_general" = "Yleinen palaute";
 
 "on" = "Käytössä";
 
@@ -1318,6 +1315,10 @@
 
 "type.amenity.driving_school" = "Autokoulu";
 
+"type.amenity.music_school" = "Musiikkikoulu";
+
+"type.amenity.language_school" = "Kielikoulu";
+
 "type.office.diplomatic" = "Suurlähetystö";
 
 "type.amenity.fast_food" = "Pikaruokala";
@@ -1360,19 +1361,19 @@
 
 "type.amenity.parking" = "Parkkipaikka";
 
-"type.amenity.parking.fee" = "Parkkipaikka";
+"type.amenity.parking.fee" = "Maksullinen pysäköinti";
 
-"type.amenity.parking.multi.storey" = "Parkkipaikka";
+"type.amenity.parking.multi.storey" = "Monikerroksinen pysäköinti";
 
-"type.amenity.parking.no.access" = "Parkkipaikka";
+"type.amenity.parking.no.access" = "Yksityinen pysäköinti";
+
+"type.amenity.parking.permissive" = "Yksityinen pysäköinti";
+
+"type.amenity.parking.private" = "Yksityinen pysäköinti";
 
 "type.amenity.parking.park_and_ride" = "Parkkipaikka";
 
-"type.amenity.parking.permissive" = "Parkkipaikka";
-
-"type.amenity.parking.private" = "Parkkipaikka";
-
-"type.amenity.parking.underground" = "Parkkipaikka";
+"type.amenity.parking.underground" = "Maanalainen pysäköinti";
 
 "type.amenity.parking_entrance.private" = "Pysäköinti sisäänkäynti";
 
@@ -1463,7 +1464,7 @@
 
 "type.amenity.school" = "Koulu";
 
-"type.amenity.shelter" = "Turvapaikka";
+"type.amenity.shelter" = "Katos";
 
 "type.amenity.shower" = "Suihku";
 
@@ -1605,25 +1606,25 @@
 
 "type.cemetery.grave" = "Hauta";
 
-"type.craft" = "Craft";
+"type.craft" = "Käsityö";
 
-"type.craft.beekeeper" = "Beekeeper";
+"type.craft.beekeeper" = "Mehiläishoitaja";
 
-"type.craft.blacksmith" = "Blacksmith";
+"type.craft.blacksmith" = "Seppä";
 
 "type.craft.brewery" = "Panimo";
 
 "type.craft.carpenter" = "Puuseppä";
 
-"type.craft.confectionery" = "Confectionery";
+"type.craft.confectionery" = "Kondiittori";
 
 "type.craft.electrician" = "Sähkömies";
 
-"type.craft.electronics_repair" = "Electronics Repair";
+"type.craft.electronics_repair" = "Elektroniikan korjaus";
 
 "type.craft.gardener" = "Puutarhuri";
 
-"type.craft.handicraft" = "Handicraft";
+"type.craft.handicraft" = "Käsityö";
 
 /* Heating, Ventilation, and Air Conditioning */
 "type.craft.hvac" = "Ilmastointilaite";
@@ -1636,11 +1637,11 @@
 
 "type.craft.plumber" = "Putkimies";
 
-"type.craft.sawmill" = "Sawmill";
+"type.craft.sawmill" = "Saha";
 
 "type.craft.shoemaker" = "Suutari";
 
-"type.craft.winery" = "Winery";
+"type.craft.winery" = "Viinitila";
 
 "type.craft.tailor" = "Räätäli";
 
@@ -2142,9 +2143,27 @@
 
 "type.historic.castle" = "Linna";
 
+"type.historic.castle.castrum" = "Castra";
+
 "type.historic.castle.defensive" = "Linna";
 
+"type.historic.castle.fortified_church" = "Linnoitettu kirkko";
+
+"type.historic.castle.fortress" = "Linnoitus";
+
+"type.historic.castle.hillfort" = "Linnavuori";
+
+"type.historic.castle.kremlin" = "Kreml";
+
+"type.historic.castle.manor" = "Kartano";
+
+"type.historic.castle.palace" = "Palatsi";
+
+"type.historic.castle.shiro" = "Japanilainen linna";
+
 "type.historic.castle.stately" = "Linna";
+
+"type.historic.city_gate" = "Kaupungin portti";
 
 "type.historic.citywalls" = "City Wall";
 
@@ -2289,6 +2308,8 @@
 "type.leisure.fitness_station" = "Kuntokeskus";
 
 "type.leisure.garden" = "Puutarha";
+
+"type.leisure.garden.residential" = "Puutarha";
 
 "type.leisure.golf_course" = "Golf-rata";
 
@@ -2668,27 +2689,223 @@
 
 "type.railway.station.subway" = "Metro";
 
+"type.railway.station.subway.adana" = "Metro";
+
+"type.railway.station.subway.algiers" = "Metro";
+
+"type.railway.station.subway.almaty" = "Metro";
+
+"type.railway.station.subway.amsterdam" = "Metro";
+
+"type.railway.station.subway.ankara" = "Metro";
+
+"type.railway.station.subway.athens" = "Metro";
+
+"type.railway.station.subway.baku" = "Metro";
+
+"type.railway.station.subway.bangkok" = "Metro";
+
 "type.railway.station.subway.barcelona" = "Metro";
+
+"type.railway.station.subway.beijing" = "Metro";
+
+"type.railway.station.subway.bengalore" = "Metro";
 
 "type.railway.station.subway.berlin" = "Metro";
 
+"type.railway.station.subway.brasilia" = "Metro";
+
+"type.railway.station.subway.brescia" = "Metro";
+
+"type.railway.station.subway.brussels" = "Metro";
+
+"type.railway.station.subway.bucharest" = "Metro";
+
+"type.railway.station.subway.budapest" = "Metro";
+
+"type.railway.station.subway.buenos_aires" = "Metro";
+
+"type.railway.station.subway.bursa" = "Metro";
+
+"type.railway.station.subway.cairo" = "Metro";
+
+"type.railway.station.subway.caracas" = "Metro";
+
+"type.railway.station.subway.catania" = "Metro";
+
+"type.railway.station.subway.changchun" = "Metro";
+
+"type.railway.station.subway.chengdu" = "Metro";
+
+"type.railway.station.subway.chicago" = "Metro";
+
+"type.railway.station.subway.chongqing" = "Metro";
+
+"type.railway.station.subway.dalian" = "Metro";
+
+"type.railway.station.subway.delhi" = "Metro";
+
+"type.railway.station.subway.dnepro" = "Metro";
+
+"type.railway.station.subway.dubai" = "Metro";
+
+"type.railway.station.subway.ekb" = "Metro";
+
+"type.railway.station.subway.fukuoka" = "Metro";
+
+"type.railway.station.subway.glasgow" = "Metro";
+
+"type.railway.station.subway.guangzhou" = "Metro";
+
+"type.railway.station.subway.hamburg" = "Metro";
+
+"type.railway.station.subway.helsinki" = "Metro";
+
+"type.railway.station.subway.hiroshima" = "Metro";
+
+"type.railway.station.subway.isfahan" = "Metro";
+
+"type.railway.station.subway.istanbul" = "Metro";
+
+"type.railway.station.subway.izmir" = "Metro";
+
+"type.railway.station.subway.kazan" = "Metro";
+
+"type.railway.station.subway.kharkiv" = "Metro";
+
 "type.railway.station.subway.kiev" = "Metro";
+
+"type.railway.station.subway.kobe" = "Metro";
+
+"type.railway.station.subway.kolkata" = "Metro";
+
+"type.railway.station.subway.kunming" = "Metro";
+
+"type.railway.station.subway.kyoto" = "Metro";
+
+"type.railway.station.subway.la" = "Metro";
+
+"type.railway.station.subway.lausanne" = "Metro";
+
+"type.railway.station.subway.lille" = "Metro";
+
+"type.railway.station.subway.lima" = "Metro";
+
+"type.railway.station.subway.lisboa" = "Metro";
+
+"type.railway.station.subway.lisbon" = "Metro";
 
 "type.railway.station.subway.london" = "Metro";
 
+"type.railway.station.subway.lyon" = "Metro";
+
 "type.railway.station.subway.madrid" = "Metro";
+
+"type.railway.station.subway.malaga" = "Metro";
+
+"type.railway.station.subway.manila" = "Metro";
+
+"type.railway.station.subway.maracaibo" = "Metro";
+
+"type.railway.station.subway.mashhad" = "Metro";
+
+"type.railway.station.subway.mecca" = "Metro";
+
+"type.railway.station.subway.medellin" = "Metro";
+
+"type.railway.station.subway.mexico" = "Metro";
+
+"type.railway.station.subway.milan" = "Metro";
 
 "type.railway.station.subway.minsk" = "Metro";
 
+"type.railway.station.subway.montreal" = "Metro";
+
 "type.railway.station.subway.moscow" = "Metro";
+
+"type.railway.station.subway.munchen" = "Metro";
+
+"type.railway.station.subway.nagoya" = "Metro";
 
 "type.railway.station.subway.newyork" = "Metro";
 
+"type.railway.station.subway.nnov" = "Metro";
+
+"type.railway.station.subway.novosibirsk" = "Metro";
+
+"type.railway.station.subway.osaka" = "Metro";
+
+"type.railway.station.subway.oslo" = "Metro";
+
+"type.railway.station.subway.palma" = "Metro";
+
+"type.railway.station.subway.panama" = "Metro";
+
 "type.railway.station.subway.paris" = "Metro";
+
+"type.railway.station.subway.philadelphia" = "Metro";
+
+"type.railway.station.subway.pyongyang" = "Metro";
+
+"type.railway.station.subway.rennes" = "Metro";
+
+"type.railway.station.subway.rio" = "Metro";
 
 "type.railway.station.subway.roma" = "Metro";
 
+"type.railway.station.subway.rotterdam" = "Metro";
+
+"type.railway.station.subway.samara" = "Metro";
+
+"type.railway.station.subway.santiago" = "Metro";
+
+"type.railway.station.subway.santo_domingo" = "Metro";
+
+"type.railway.station.subway.saopaulo" = "Metro";
+
+"type.railway.station.subway.sapporo" = "Metro";
+
+"type.railway.station.subway.sendai" = "Metro";
+
+"type.railway.station.subway.sf" = "Metro";
+
+"type.railway.station.subway.shanghai" = "Metro";
+
+"type.railway.station.subway.shiraz" = "Metro";
+
+"type.railway.station.subway.sofia" = "Metro";
+
 "type.railway.station.subway.spb" = "Metro";
+
+"type.railway.station.subway.stockholm" = "Metro";
+
+"type.railway.station.subway.tabriz" = "Metro";
+
+"type.railway.station.subway.taipei" = "Metro";
+
+"type.railway.station.subway.taoyuan" = "Metro";
+
+"type.railway.station.subway.tashkent" = "Metro";
+
+"type.railway.station.subway.tbilisi" = "Metro";
+
+"type.railway.station.subway.tianjin" = "Metro";
+
+"type.railway.station.subway.tokyo" = "Metro";
+
+"type.railway.station.subway.valencia" = "Metro";
+
+"type.railway.station.subway.vienna" = "Metro";
+
+"type.railway.station.subway.warszawa" = "Metro";
+
+"type.railway.station.subway.washington" = "Metro";
+
+"type.railway.station.subway.wuhan" = "Metro";
+
+"type.railway.station.subway.yerevan" = "Metro";
+
+"type.railway.station.subway.yokohama" = "Metro";
 
 "type.railway.subway" = "Subway Line";
 
@@ -2698,27 +2915,223 @@
 
 "type.railway.subway_entrance" = "Metron sisäänkäynti";
 
-"type.railway.subway_entrance.barcelona" = "Metro";
+"type.railway.subway_entrance.adana" = "Metron sisäänkäynti";
 
-"type.railway.subway_entrance.berlin" = "Metro";
+"type.railway.subway_entrance.algiers" = "Metron sisäänkäynti";
 
-"type.railway.subway_entrance.kiev" = "Metro";
+"type.railway.subway_entrance.almaty" = "Metron sisäänkäynti";
 
-"type.railway.subway_entrance.london" = "Metro";
+"type.railway.subway_entrance.amsterdam" = "Metron sisäänkäynti";
 
-"type.railway.subway_entrance.madrid" = "Metro";
+"type.railway.subway_entrance.ankara" = "Metron sisäänkäynti";
 
-"type.railway.subway_entrance.minsk" = "Metro";
+"type.railway.subway_entrance.athens" = "Metron sisäänkäynti";
 
-"type.railway.subway_entrance.moscow" = "Metro";
+"type.railway.subway_entrance.baku" = "Metron sisäänkäynti";
 
-"type.railway.subway_entrance.newyork" = "Metro";
+"type.railway.subway_entrance.bangkok" = "Metron sisäänkäynti";
 
-"type.railway.subway_entrance.paris" = "Metro";
+"type.railway.subway_entrance.barcelona" = "Metron sisäänkäynti";
 
-"type.railway.subway_entrance.roma" = "Metro";
+"type.railway.subway_entrance.beijing" = "Metron sisäänkäynti";
 
-"type.railway.subway_entrance.spb" = "Metro";
+"type.railway.subway_entrance.bengalore" = "Metron sisäänkäynti";
+
+"type.railway.subway_entrance.berlin" = "Metron sisäänkäynti";
+
+"type.railway.subway_entrance.brasilia" = "Metron sisäänkäynti";
+
+"type.railway.subway_entrance.brescia" = "Metron sisäänkäynti";
+
+"type.railway.subway_entrance.brussels" = "Metron sisäänkäynti";
+
+"type.railway.subway_entrance.bucharest" = "Metron sisäänkäynti";
+
+"type.railway.subway_entrance.budapest" = "Metron sisäänkäynti";
+
+"type.railway.subway_entrance.buenos_aires" = "Metron sisäänkäynti";
+
+"type.railway.subway_entrance.bursa" = "Metron sisäänkäynti";
+
+"type.railway.subway_entrance.cairo" = "Metron sisäänkäynti";
+
+"type.railway.subway_entrance.caracas" = "Metron sisäänkäynti";
+
+"type.railway.subway_entrance.catania" = "Metron sisäänkäynti";
+
+"type.railway.subway_entrance.changchun" = "Metron sisäänkäynti";
+
+"type.railway.subway_entrance.chengdu" = "Metron sisäänkäynti";
+
+"type.railway.subway_entrance.chicago" = "Metron sisäänkäynti";
+
+"type.railway.subway_entrance.chongqing" = "Metron sisäänkäynti";
+
+"type.railway.subway_entrance.dalian" = "Metron sisäänkäynti";
+
+"type.railway.subway_entrance.delhi" = "Metron sisäänkäynti";
+
+"type.railway.subway_entrance.dnepro" = "Metron sisäänkäynti";
+
+"type.railway.subway_entrance.dubai" = "Metron sisäänkäynti";
+
+"type.railway.subway_entrance.ekb" = "Metron sisäänkäynti";
+
+"type.railway.subway_entrance.fukuoka" = "Metron sisäänkäynti";
+
+"type.railway.subway_entrance.glasgow" = "Metron sisäänkäynti";
+
+"type.railway.subway_entrance.guangzhou" = "Metron sisäänkäynti";
+
+"type.railway.subway_entrance.hamburg" = "Metron sisäänkäynti";
+
+"type.railway.subway_entrance.helsinki" = "Metron sisäänkäynti";
+
+"type.railway.subway_entrance.hiroshima" = "Metron sisäänkäynti";
+
+"type.railway.subway_entrance.isfahan" = "Metron sisäänkäynti";
+
+"type.railway.subway_entrance.istanbul" = "Metron sisäänkäynti";
+
+"type.railway.subway_entrance.izmir" = "Metron sisäänkäynti";
+
+"type.railway.subway_entrance.kazan" = "Metron sisäänkäynti";
+
+"type.railway.subway_entrance.kharkiv" = "Metron sisäänkäynti";
+
+"type.railway.subway_entrance.kiev" = "Metron sisäänkäynti";
+
+"type.railway.subway_entrance.kobe" = "Metron sisäänkäynti";
+
+"type.railway.subway_entrance.kolkata" = "Metron sisäänkäynti";
+
+"type.railway.subway_entrance.kunming" = "Metron sisäänkäynti";
+
+"type.railway.subway_entrance.kyoto" = "Metron sisäänkäynti";
+
+"type.railway.subway_entrance.la" = "Metron sisäänkäynti";
+
+"type.railway.subway_entrance.lausanne" = "Metron sisäänkäynti";
+
+"type.railway.subway_entrance.lille" = "Metron sisäänkäynti";
+
+"type.railway.subway_entrance.lima" = "Metron sisäänkäynti";
+
+"type.railway.subway_entrance.lisboa" = "Metron sisäänkäynti";
+
+"type.railway.subway_entrance.lisbon" = "Metron sisäänkäynti";
+
+"type.railway.subway_entrance.london" = "Metron sisäänkäynti";
+
+"type.railway.subway_entrance.lyon" = "Metron sisäänkäynti";
+
+"type.railway.subway_entrance.madrid" = "Metron sisäänkäynti";
+
+"type.railway.subway_entrance.malaga" = "Metron sisäänkäynti";
+
+"type.railway.subway_entrance.manila" = "Metron sisäänkäynti";
+
+"type.railway.subway_entrance.maracaibo" = "Metron sisäänkäynti";
+
+"type.railway.subway_entrance.mashhad" = "Metron sisäänkäynti";
+
+"type.railway.subway_entrance.mecca" = "Metron sisäänkäynti";
+
+"type.railway.subway_entrance.medellin" = "Metron sisäänkäynti";
+
+"type.railway.subway_entrance.mexico" = "Metron sisäänkäynti";
+
+"type.railway.subway_entrance.milan" = "Metron sisäänkäynti";
+
+"type.railway.subway_entrance.minsk" = "Metron sisäänkäynti";
+
+"type.railway.subway_entrance.montreal" = "Metron sisäänkäynti";
+
+"type.railway.subway_entrance.moscow" = "Metron sisäänkäynti";
+
+"type.railway.subway_entrance.munchen" = "Metron sisäänkäynti";
+
+"type.railway.subway_entrance.nagoya" = "Metron sisäänkäynti";
+
+"type.railway.subway_entrance.newyork" = "Metron sisäänkäynti";
+
+"type.railway.subway_entrance.nnov" = "Metron sisäänkäynti";
+
+"type.railway.subway_entrance.novosibirsk" = "Metron sisäänkäynti";
+
+"type.railway.subway_entrance.osaka" = "Metron sisäänkäynti";
+
+"type.railway.subway_entrance.oslo" = "Metron sisäänkäynti";
+
+"type.railway.subway_entrance.palma" = "Metron sisäänkäynti";
+
+"type.railway.subway_entrance.panama" = "Metron sisäänkäynti";
+
+"type.railway.subway_entrance.paris" = "Metron sisäänkäynti";
+
+"type.railway.subway_entrance.philadelphia" = "Metron sisäänkäynti";
+
+"type.railway.subway_entrance.pyongyang" = "Metron sisäänkäynti";
+
+"type.railway.subway_entrance.rennes" = "Metron sisäänkäynti";
+
+"type.railway.subway_entrance.rio" = "Metron sisäänkäynti";
+
+"type.railway.subway_entrance.roma" = "Metron sisäänkäynti";
+
+"type.railway.subway_entrance.rotterdam" = "Metron sisäänkäynti";
+
+"type.railway.subway_entrance.samara" = "Metron sisäänkäynti";
+
+"type.railway.subway_entrance.santiago" = "Metron sisäänkäynti";
+
+"type.railway.subway_entrance.santo_domingo" = "Metron sisäänkäynti";
+
+"type.railway.subway_entrance.saopaulo" = "Metron sisäänkäynti";
+
+"type.railway.subway_entrance.sapporo" = "Metron sisäänkäynti";
+
+"type.railway.subway_entrance.sendai" = "Metron sisäänkäynti";
+
+"type.railway.subway_entrance.sf" = "Metron sisäänkäynti";
+
+"type.railway.subway_entrance.shanghai" = "Metron sisäänkäynti";
+
+"type.railway.subway_entrance.shiraz" = "Metron sisäänkäynti";
+
+"type.railway.subway_entrance.sofia" = "Metron sisäänkäynti";
+
+"type.railway.subway_entrance.spb" = "Metron sisäänkäynti";
+
+"type.railway.subway_entrance.stockholm" = "Metron sisäänkäynti";
+
+"type.railway.subway_entrance.tabriz" = "Metron sisäänkäynti";
+
+"type.railway.subway_entrance.taipei" = "Metron sisäänkäynti";
+
+"type.railway.subway_entrance.taoyuan" = "Metron sisäänkäynti";
+
+"type.railway.subway_entrance.tashkent" = "Metron sisäänkäynti";
+
+"type.railway.subway_entrance.tbilisi" = "Metron sisäänkäynti";
+
+"type.railway.subway_entrance.tianjin" = "Metron sisäänkäynti";
+
+"type.railway.subway_entrance.tokyo" = "Metron sisäänkäynti";
+
+"type.railway.subway_entrance.valencia" = "Metron sisäänkäynti";
+
+"type.railway.subway_entrance.vienna" = "Metron sisäänkäynti";
+
+"type.railway.subway_entrance.warszawa" = "Metron sisäänkäynti";
+
+"type.railway.subway_entrance.washington" = "Metron sisäänkäynti";
+
+"type.railway.subway_entrance.wuhan" = "Metron sisäänkäynti";
+
+"type.railway.subway_entrance.yerevan" = "Metron sisäänkäynti";
+
+"type.railway.subway_entrance.yokohama" = "Metron sisäänkäynti";
 
 "type.railway.tram" = "Tram Line";
 
@@ -2991,9 +3404,9 @@
 
 "type.sport.volleyball" = "Lentopallo";
 
-"type.sport.9pin" = "Keilailu";
-
 "type.sport.10pin" = "Keilailu";
+
+"type.sport.9pin" = "Keilailu";
 
 "type.sport.padel" = "Padel";
 

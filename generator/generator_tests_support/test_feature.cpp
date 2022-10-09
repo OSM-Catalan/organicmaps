@@ -7,10 +7,8 @@
 #include "indexer/classificator.hpp"
 #include "indexer/editable_map_object.hpp"
 #include "indexer/feature.hpp"
-#include "indexer/feature_algo.hpp"
 #include "indexer/feature_decl.hpp"
 #include "indexer/feature_meta.hpp"
-#include "indexer/ftypes_matcher.hpp"
 #include "indexer/mwm_set.hpp"
 
 #include "coding/string_utf8_multilang.hpp"
@@ -72,9 +70,8 @@ TestFeature::TestFeature(m2::PointD const & center, StringUtf8Multilang const & 
   Init();
 }
 
-TestFeature::TestFeature(vector<m2::PointD> const & boundary, string const & name,
-                         string const & lang)
-  : m_id(GenUniqueId()), m_boundary(boundary), m_type(Type::Area)
+TestFeature::TestFeature(vector<m2::PointD> const & boundary, string const & name, string const & lang)
+  : m_id(GenUniqueId()), m_center(0, 0), m_boundary(boundary), m_type(Type::Area)
 {
   m_names.AddString(lang, name);
   m_names.AddString("default", name);
@@ -424,7 +421,6 @@ TestBuilding::TestBuilding(m2::PointD const & center, string const & name,
 TestBuilding::TestBuilding(vector<m2::PointD> const & boundary, string const & name,
                            string const & houseNumber, string_view street, string const & lang)
   : TestFeature(boundary, name, lang)
-  , m_boundary(boundary)
   , m_houseNumber(houseNumber)
   , m_streetName(street)
 {
@@ -455,7 +451,7 @@ string TestBuilding::ToDebugString() const
 
 // TestPark ----------------------------------------------------------------------------------------
 TestPark::TestPark(vector<m2::PointD> const & boundary, string const & name, string const & lang)
-  : TestFeature(name, lang), m_boundary(boundary)
+  : TestFeature(boundary, name, lang)
 {
 }
 

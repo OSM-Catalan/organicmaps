@@ -710,7 +710,7 @@ void Framework::FillSearchResultInfo(SearchMarkPoint const & smp, place_page::In
 void Framework::FillMyPositionInfo(place_page::Info & info, place_page::BuildInfo const & buildInfo) const
 {
   auto const position = GetCurrentPosition();
-  VERIFY(position, ());
+  CHECK(position, ());
   info.SetMercator(*position);
   info.SetCustomName(m_stringsBundle.GetString("core_my_position"));
 
@@ -730,6 +730,19 @@ void Framework::FillRouteMarkInfo(RouteMarkPoint const & rmp, place_page::Info &
   info.SetIsRoutePoint();
   info.SetRouteMarkType(rmp.GetRoutePointType());
   info.SetIntermediateIndex(rmp.GetIntermediateIndex());
+}
+
+void Framework::FillSpeedCameraMarkInfo(SpeedCameraMark const & speedCameraMark, place_page::Info & info) const
+{
+  info.SetCanEditOrAdd(false);
+  info.SetMercator(speedCameraMark.GetPivot());
+
+  // Title is a speed limit, if any.
+  auto title = speedCameraMark.GetTitle();
+  if (!title.empty())
+    title = title + " " + platform::GetLocalizedSpeedUnits(measurement_utils::GetMeasurementUnits());
+
+  info.SetCustomNames(title, platform::GetLocalizedTypeName("highway-speed_camera"));
 }
 
 void Framework::FillTransitMarkInfo(TransitMark const & transitMark, place_page::Info & info) const
@@ -998,6 +1011,7 @@ void Framework::OnSize(int w, int h)
 {
   if (m_drapeEngine != nullptr)
     m_drapeEngine->Resize(std::max(w, 2), std::max(h, 2));
+  m_visibleViewport = m2::RectD(0, 0, w, h);
 }
 
 namespace
@@ -1507,9 +1521,8 @@ void Framework::CreateDrapeEngine(ref_ptr<dp::GraphicsContextFactory> contextFac
   OnSize(params.m_surfaceWidth, params.m_surfaceHeight);
 
   Allow3dMode(allow3d, allow3dBuildings);
-  LoadViewport();
 
-  SetVisibleViewport(m2::RectD(0, 0, params.m_surfaceWidth, params.m_surfaceHeight));
+  LoadViewport();
 
   if (m_connectToGpsTrack)
     GpsTracker::Instance().Connect(bind(&Framework::OnUpdateGpsTrackPointsCallback, this, _1, _2));
@@ -1699,10 +1712,7 @@ void Framework::SetupMeasurementSystem()
 {
   GetPlatform().SetupMeasurementSystem();
 
-  auto units = measurement_utils::Units::Metric;
-  settings::TryGet(settings::kMeasurementUnits, units);
-
-  m_routingManager.SetTurnNotificationsUnits(units);
+  m_routingManager.SetTurnNotificationsUnits(measurement_utils::GetMeasurementUnits());
 }
 
 void Framework::SetWidgetLayout(gui::TWidgetsLayoutInfo && layout)
@@ -1823,6 +1833,11 @@ url_scheme::SearchRequest Framework::GetParsedSearchRequest() const
 std::string const & Framework::GetParsedAppName() const
 {
   return m_parsedMapApi.GetAppName();
+}
+
+ms::LatLon Framework::GetParsedCenterLatLon() const
+{
+  return m_parsedMapApi.GetCenterLatLon();
 }
 
 FeatureID Framework::GetFeatureAtPoint(m2::PointD const & mercator,
@@ -2148,6 +2163,11 @@ std::optional<place_page::Info> Framework::BuildPlacePageInfo(
       case UserMark::Type::TRANSIT:
       {
         FillTransitMarkInfo(*static_cast<TransitMark const *>(mark), outInfo);
+        break;
+      }
+      case UserMark::Type::SPEED_CAM:
+      {
+        FillSpeedCameraMarkInfo(*static_cast<SpeedCameraMark const *>(mark), outInfo);
         break;
       }
       default:

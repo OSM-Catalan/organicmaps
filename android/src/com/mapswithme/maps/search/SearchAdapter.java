@@ -176,6 +176,11 @@ class SearchAdapter extends RecyclerView.Adapter<SearchAdapter.SearchDataViewHol
         }
       }
 
+      if (result.isHotel && result.stars != 0)
+      {
+        tail.append(" • ").append("★★★★★★★".substring(0, Math.min(7, result.stars)));
+      }
+
       res.append(tail);
 
       return res;
@@ -267,7 +272,7 @@ class SearchAdapter extends RecyclerView.Adapter<SearchAdapter.SearchDataViewHol
 
     private void setBackground()
     {
-      final Context context = mSearchFragment.getActivity();
+      final Context context = mSearchFragment.requireActivity();
       final int itemBg = ThemeUtils.getResource(context, R.attr.clickableBackground);
       mFrame.setBackgroundResource(itemBg);
     }

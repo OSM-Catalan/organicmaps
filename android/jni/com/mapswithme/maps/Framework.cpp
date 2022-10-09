@@ -278,9 +278,6 @@ void Framework::Resize(JNIEnv * env, jobject jSurface, int w, int h)
     m_oglContextFactory->CastFactory<AndroidOGLContextFactory>()->UpdateSurfaceSize(w, h);
   }
   m_work.OnSize(w, h);
-
-  //TODO: remove after correct visible rect calculation.
-  frm()->SetVisibleViewport(m2::RectD(0, 0, w, h));
 }
 
 void Framework::DetachSurface(bool destroySurface)
@@ -827,13 +824,26 @@ Java_com_mapswithme_maps_Framework_nativeGetParsedSearchRequest(JNIEnv * env, jc
   // Java signature : ParsedSearchRequest(String query, String locale, double lat, double lon, boolean isSearchOnMap)
   static jmethodID const ctor = jni::GetConstructorID(env, cl, "(Ljava/lang/String;Ljava/lang/String;DDZ)V");
   auto const & r = frm()->GetParsedSearchRequest();
-  return env->NewObject(cl, ctor, jni::ToJavaString(env, r.m_query), jni::ToJavaString(env, r.m_locale), r.m_centerLat, r.m_centerLon, r.m_isSearchOnMap);
+  ms::LatLon const center = frm()->GetParsedCenterLatLon();
+  return env->NewObject(cl, ctor, jni::ToJavaString(env, r.m_query), jni::ToJavaString(env, r.m_locale), center.m_lat, center.m_lon, r.m_isSearchOnMap);
 }
 
 JNIEXPORT jstring JNICALL
 Java_com_mapswithme_maps_Framework_nativeGetParsedAppName(JNIEnv * env, jclass)
 {
   return jni::ToJavaString(env, frm()->GetParsedAppName());
+}
+
+JNIEXPORT jdoubleArray JNICALL
+Java_com_mapswithme_maps_Framework_nativeGetParsedCenterLatLon(JNIEnv * env, jclass)
+{
+  ms::LatLon const center = frm()->GetParsedCenterLatLon();
+
+  double latlon[] = {center.m_lat, center.m_lon};
+  jdoubleArray jLatLon = env->NewDoubleArray(2);
+  env->SetDoubleArrayRegion(jLatLon, 0, 2, latlon);
+
+  return jLatLon;
 }
 
 JNIEXPORT void JNICALL
@@ -947,7 +957,9 @@ Java_com_mapswithme_maps_Framework_nativeFormatAltitude(JNIEnv * env, jclass, jd
 JNIEXPORT jstring JNICALL
 Java_com_mapswithme_maps_Framework_nativeFormatSpeed(JNIEnv * env, jclass, jdouble speed)
 {
-  return jni::ToJavaString(env, measurement_utils::FormatSpeed(speed));
+  auto const units = measurement_utils::GetMeasurementUnits();
+  return jni::ToJavaString(env, measurement_utils::FormatSpeedNumeric(speed, units) + " " +
+                                platform::GetLocalizedSpeedUnits(units));
 }
 
 /*
@@ -1217,27 +1229,32 @@ Java_com_mapswithme_maps_Framework_nativeGetRouteFollowingInfo(JNIEnv * env, jcl
 JNIEXPORT jintArray JNICALL
 Java_com_mapswithme_maps_Framework_nativeGenerateRouteAltitudeChartBits(JNIEnv * env, jclass, jint width, jint height, jobject routeAltitudeLimits)
 {
-  ::Framework * fr = frm();
-  ASSERT(fr, ());
-
-  geometry::Altitudes altitudes;
-  vector<double> routePointDistanceM;
-  if (!fr->GetRoutingManager().GetRouteAltitudesAndDistancesM(routePointDistanceM, altitudes))
+  RoutingManager::DistanceAltitude altitudes;
+  if (!frm()->GetRoutingManager().GetRouteAltitudesAndDistancesM(altitudes))
   {
     LOG(LWARNING, ("Can't get distance to route points and altitude."));
     return nullptr;
   }
 
+  altitudes.Simplify();
+
   vector<uint8_t> imageRGBAData;
-  uint32_t totalAscent = 0;
-  uint32_t totalDescent = 0;
-  measurement_utils::Units units = measurement_utils::Units::Metric;
-  if (!fr->GetRoutingManager().GenerateRouteAltitudeChart(
-        width, height, altitudes, routePointDistanceM, imageRGBAData,
-        totalAscent, totalDescent, units))
+  if (!altitudes.GenerateRouteAltitudeChart(width, height, imageRGBAData))
   {
     LOG(LWARNING, ("Can't generate route altitude image."));
     return nullptr;
+  }
+
+  uint32_t totalAscent, totalDescent;
+  altitudes.CalculateAscentDescent(totalAscent, totalDescent);
+
+  // Android platform code has specific result string formatting, so make conversion here.
+  using namespace measurement_utils;
+  auto units = Units::Metric;
+  if (settings::Get(settings::kMeasurementUnits, units) && units == Units::Imperial)
+  {
+    totalAscent = measurement_utils::MetersToFeet(totalAscent);
+    totalDescent = measurement_utils::MetersToFeet(totalDescent);
   }
 
   // Passing route limits.
@@ -1254,7 +1271,7 @@ Java_com_mapswithme_maps_Framework_nativeGenerateRouteAltitudeChartBits(JNIEnv *
 
   static jfieldID const isMetricUnitsField = env->GetFieldID(routeAltitudeLimitsClass, "isMetricUnits", "Z");
   ASSERT(isMetricUnitsField, ());
-  env->SetBooleanField(routeAltitudeLimits, isMetricUnitsField, units == measurement_utils::Units::Metric);
+  env->SetBooleanField(routeAltitudeLimits, isMetricUnitsField, units == Units::Metric);
 
   size_t const imageRGBADataSize = imageRGBAData.size();
   ASSERT_NOT_EQUAL(imageRGBADataSize, 0, ("GenerateRouteAltitudeChart returns true but the vector with altitude image bits is empty."));
@@ -1764,12 +1781,10 @@ Java_com_mapswithme_maps_Framework_nativeSetPowerManagerScheme(JNIEnv *, jclass,
 }
 
 JNIEXPORT void JNICALL
-Java_com_mapswithme_maps_Framework_nativeSetViewportCenter(JNIEnv *, jclass, jdouble lat,
-                                                           jdouble lon, jint zoom, jboolean isAnim)
+Java_com_mapswithme_maps_Framework_nativeSetViewportCenter(JNIEnv *, jclass, jdouble lat, jdouble lon, jint zoom)
 {
-  auto const center = mercator::FromLatLon(static_cast<double>(lat),
-                                           static_cast<double>(lon));
-  frm()->SetViewportCenter(center, static_cast<int>(zoom), static_cast<bool>(isAnim));
+  // isAnim = true because of previous nativeTurnOnChoosePositionMode animations.
+  frm()->SetViewportCenter(mercator::FromLatLon(lat, lon), static_cast<int>(zoom), true /* isAnim */);
 }
 
 JNIEXPORT void JNICALL

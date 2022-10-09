@@ -114,7 +114,7 @@ final class AboutController: MWMViewController, UITableViewDataSource, UITableVi
 
   // MARK: - UITableView data source
 
-  // Update didSelect... delegate after modifying this list.
+  // Update didSelect... delegate and tools/python/clean_strings_txt.py after modifying this list.
   private let labels = [
     ["news", "faq", "report_a_bug", "how_to_support_us", "rate_the_app"],
     ["telegram", "github", "website", "email", "facebook", "twitter", "instagram", "matrix", "openstreetmap"],
@@ -256,12 +256,13 @@ final class AboutController: MWMViewController, UITableViewDataSource, UITableVi
     let subject = emailSubject(subject: header)
     let body = emailBody()
 
-    // Try Gmail and Outlook first.
-    if openGmail(subject: subject, body: body, recipients: toRecipients)
-        || openOutlook(subject: subject, body: body, recipients: toRecipients) {
+    // Before iOS 14, try to open alternate email apps first, assuming that if users installed them, they're using them.
+    let os = ProcessInfo().operatingSystemVersion
+    if (os.majorVersion < 14 && (openGmail(subject: subject, body: body, recipients: toRecipients) ||
+                                 openOutlook(subject: subject, body: body, recipients: toRecipients))) {
       return
     }
-
+    // From iOS 14, it is possible to change the default mail app, and mailto should open a default mail app.
     if MWMMailViewController.canSendMail() {
       let vc = MWMMailViewController()
       vc.mailComposeDelegate = self

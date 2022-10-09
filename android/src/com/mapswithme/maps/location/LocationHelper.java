@@ -151,7 +151,6 @@ public enum LocationHelper implements Initializable<Context>, AppBackgroundTrack
   private final LocationState.LocationPendingTimeoutListener mLocationPendingTimeoutListener = () -> {
     if (mActive)
     {
-      stop();
       if (PermissionsUtils.isLocationGranted(mContext) && LocationUtils.areLocationServicesTurnedOn(mContext))
         notifyLocationNotFound();
     }
@@ -546,7 +545,7 @@ public enum LocationHelper implements Initializable<Context>, AppBackgroundTrack
     mUiCallback = callback;
 
     if (!Config.isScreenSleepEnabled()) {
-      Utils.keepScreenOn(true, mUiCallback.getActivity().getWindow());
+      Utils.keepScreenOn(true, mUiCallback.requireActivity().getWindow());
     }
 
     mUiCallback.onMyPositionModeChanged(getMyPositionMode());
@@ -579,7 +578,7 @@ public enum LocationHelper implements Initializable<Context>, AppBackgroundTrack
       return;
     }
 
-    Utils.keepScreenOn(false, mUiCallback.getActivity().getWindow());
+    Utils.keepScreenOn(false, mUiCallback.requireActivity().getWindow());
     mUiCallback = null;
   }
 
@@ -637,7 +636,7 @@ public enum LocationHelper implements Initializable<Context>, AppBackgroundTrack
 
   public interface UiCallback
   {
-    Activity getActivity();
+    Activity requireActivity();
     void onMyPositionModeChanged(int newMode);
     void onLocationUpdated(@NonNull Location location);
     void onCompassUpdated(@NonNull CompassData compass);

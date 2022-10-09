@@ -89,9 +89,9 @@ inline std::string DebugPrint(KmlFileType fileType)
 /// @name File name/path helpers.
 /// @{
 std::string GetBookmarksDirectory();
-std::string RemoveInvalidSymbols(std::string name);
+std::string RemoveInvalidSymbols(std::string const & name);
 std::string GenerateUniqueFileName(const std::string & path, std::string name, std::string const & ext = kKmlExtension);
-std::string GenerateValidAndUniqueFilePathForKML(std::string fileName);
+std::string GenerateValidAndUniqueFilePathForKML(std::string const & fileName);
 /// @}
 
 /// @name SerDes helpers.
@@ -108,6 +108,7 @@ bool SaveKmlFileByExt(kml::FileData & kmlData, std::string const & file);
 
 void ResetIds(kml::FileData & kmlData);
 
+namespace feature { class TypesHolder; }
 void SaveFeatureTypes(feature::TypesHolder const & types, kml::BookmarkData & bmData);
 
 std::string GetPreferredBookmarkName(kml::BookmarkData const & bmData);

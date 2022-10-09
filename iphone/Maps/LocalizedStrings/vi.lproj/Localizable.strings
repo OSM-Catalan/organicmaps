@@ -282,11 +282,11 @@
 /* Text in menu */
 "instagram" = "Instagram";
 
+/* Text in the editor */
+"vk" = "VK";
+
 /* Text in menu */
 "openstreetmap" = "OpenStreetMap";
-
-/* Settings: Send feedback button and dialog title */
-"feedback" = "Phản hồi";
 
 /* Text in menu */
 "rate_the_app" = "Cho điểm ứng dụng";
@@ -810,10 +810,10 @@
 /* Displayed when saving some edits to the map to warn against publishing personal data */
 "editor_share_to_all_dialog_title" = "Bạn có muốn gửi cho toàn bộ người dùng?";
 
-/* iOS Dialog before publishing the modifications to the public map. */
+/* Dialog before publishing the modifications to the public map. */
 "editor_share_to_all_dialog_message_1" = "Chắc chắn rằng bạn không nhập bất kỳ thông tin cá nhân nào.";
 
-"editor_share_to_all_dialog_message_2" = "Chúng tôi sẽ kiểm tra những thay đổi. Nếu chúng tôi có câu hỏi nào, chúng tôi sẽ liên lạc với bạn qua email.";
+"editor_share_to_all_dialog_message_2" = "Các biên tập viên của OpenStreetMap sẽ kiểm tra các thay đổi và liên hệ với bạn nếu họ có bất kỳ câu hỏi nào.";
 
 "navigation_stop_button" = "dừng";
 
@@ -867,9 +867,6 @@
 
 /* "traffic" as in "road congestion" */
 "traffic_data_unavailable" = "Dữ liệu giao thông không khả dụng";
-
-/* Settings: "Send general feedback" button */
-"feedback_general" = "Phản hồi chung";
 
 "on" = "Bật";
 
@@ -1318,6 +1315,10 @@
 
 "type.amenity.driving_school" = "Trường lái xe";
 
+"type.amenity.music_school" = "Trường âm nhạc";
+
+"type.amenity.language_school" = "Ngôn ngữ Trường học";
+
 "type.office.diplomatic" = "Đại sứ quán";
 
 "type.amenity.fast_food" = "Thức ăn nhanh";
@@ -1360,19 +1361,19 @@
 
 "type.amenity.parking" = "đỗ xe";
 
-"type.amenity.parking.fee" = "đỗ xe";
+"type.amenity.parking.fee" = "Đậu xe trả phí";
 
-"type.amenity.parking.multi.storey" = "đỗ xe";
+"type.amenity.parking.multi.storey" = "Bãi đậu xe nhiều tầng";
 
-"type.amenity.parking.no.access" = "đỗ xe";
+"type.amenity.parking.no.access" = "Bãi đậu xe tư nhân";
+
+"type.amenity.parking.permissive" = "Bãi đậu xe tư nhân";
+
+"type.amenity.parking.private" = "Bãi đậu xe tư nhân";
 
 "type.amenity.parking.park_and_ride" = "đỗ xe";
 
-"type.amenity.parking.permissive" = "đỗ xe";
-
-"type.amenity.parking.private" = "đỗ xe";
-
-"type.amenity.parking.underground" = "đỗ xe";
+"type.amenity.parking.underground" = "Bãi đậu xe ngầm";
 
 "type.amenity.parking_entrance.private" = "Lối vào bãi đậu xe";
 
@@ -1605,25 +1606,25 @@
 
 "type.cemetery.grave" = "Phần mộ";
 
-"type.craft" = "Craft";
+"type.craft" = "Thủ công";
 
-"type.craft.beekeeper" = "Beekeeper";
+"type.craft.beekeeper" = "Người nuôi ong";
 
-"type.craft.blacksmith" = "Blacksmith";
+"type.craft.blacksmith" = "Thợ rèn";
 
 "type.craft.brewery" = "Nhà máy bia";
 
 "type.craft.carpenter" = "Thợ mộc";
 
-"type.craft.confectionery" = "Confectionery";
+"type.craft.confectionery" = "Người làm bánh kẹo";
 
 "type.craft.electrician" = "Thợ điện";
 
-"type.craft.electronics_repair" = "Electronics Repair";
+"type.craft.electronics_repair" = "Sửa chữa điện tử";
 
 "type.craft.gardener" = "Người thiết kế và xây dựng cảnh quan";
 
-"type.craft.handicraft" = "Handicraft";
+"type.craft.handicraft" = "Thủ công mỹ nghệ";
 
 /* Heating, Ventilation, and Air Conditioning */
 "type.craft.hvac" = "Điều hòa nhiệt độ";
@@ -1636,11 +1637,11 @@
 
 "type.craft.plumber" = "Thợ đường ống";
 
-"type.craft.sawmill" = "Sawmill";
+"type.craft.sawmill" = "Sumel";
 
 "type.craft.shoemaker" = "Sửa giày";
 
-"type.craft.winery" = "Winery";
+"type.craft.winery" = "Nhà máy rượu";
 
 "type.craft.tailor" = "Thợ may";
 
@@ -2140,11 +2141,29 @@
 
 "type.historic.boundary_stone" = "Boundary Stone";
 
-"type.historic.castle" = "Pháo đài";
+"type.historic.castle" = "Lâu đài";
 
-"type.historic.castle.defensive" = "Pháo đài";
+"type.historic.castle.castrum" = "Pháo đài La mã";
+
+"type.historic.castle.defensive" = "Lâu đài";
+
+"type.historic.castle.fortified_church" = "Nhà thờ kiên cố";
+
+"type.historic.castle.fortress" = "Pháo đài";
+
+"type.historic.castle.hillfort" = "Hillfort";
+
+"type.historic.castle.kremlin" = "Kremli";
+
+"type.historic.castle.manor" = "Trang viên";
+
+"type.historic.castle.palace" = "Cung điện";
+
+"type.historic.castle.shiro" = "Lâu đài nhật bản";
 
 "type.historic.castle.stately" = "Pháo đài";
+
+"type.historic.city_gate" = "Cổng thành";
 
 "type.historic.citywalls" = "City Wall";
 
@@ -2289,6 +2308,8 @@
 "type.leisure.fitness_station" = "Trạm tập thể hình";
 
 "type.leisure.garden" = "Điểm khảo cổ";
+
+"type.leisure.garden.residential" = "Điểm khảo cổ";
 
 "type.leisure.golf_course" = "Sân gôn";
 
@@ -2668,27 +2689,223 @@
 
 "type.railway.station.subway" = "Ngầm";
 
+"type.railway.station.subway.adana" = "Ngầm";
+
+"type.railway.station.subway.algiers" = "Ngầm";
+
+"type.railway.station.subway.almaty" = "Ngầm";
+
+"type.railway.station.subway.amsterdam" = "Ngầm";
+
+"type.railway.station.subway.ankara" = "Ngầm";
+
+"type.railway.station.subway.athens" = "Ngầm";
+
+"type.railway.station.subway.baku" = "Ngầm";
+
+"type.railway.station.subway.bangkok" = "Ngầm";
+
 "type.railway.station.subway.barcelona" = "Ngầm";
+
+"type.railway.station.subway.beijing" = "Ngầm";
+
+"type.railway.station.subway.bengalore" = "Ngầm";
 
 "type.railway.station.subway.berlin" = "Ngầm";
 
+"type.railway.station.subway.brasilia" = "Ngầm";
+
+"type.railway.station.subway.brescia" = "Ngầm";
+
+"type.railway.station.subway.brussels" = "Ngầm";
+
+"type.railway.station.subway.bucharest" = "Ngầm";
+
+"type.railway.station.subway.budapest" = "Ngầm";
+
+"type.railway.station.subway.buenos_aires" = "Ngầm";
+
+"type.railway.station.subway.bursa" = "Ngầm";
+
+"type.railway.station.subway.cairo" = "Ngầm";
+
+"type.railway.station.subway.caracas" = "Ngầm";
+
+"type.railway.station.subway.catania" = "Ngầm";
+
+"type.railway.station.subway.changchun" = "Ngầm";
+
+"type.railway.station.subway.chengdu" = "Ngầm";
+
+"type.railway.station.subway.chicago" = "Ngầm";
+
+"type.railway.station.subway.chongqing" = "Ngầm";
+
+"type.railway.station.subway.dalian" = "Ngầm";
+
+"type.railway.station.subway.delhi" = "Ngầm";
+
+"type.railway.station.subway.dnepro" = "Ngầm";
+
+"type.railway.station.subway.dubai" = "Ngầm";
+
+"type.railway.station.subway.ekb" = "Ngầm";
+
+"type.railway.station.subway.fukuoka" = "Ngầm";
+
+"type.railway.station.subway.glasgow" = "Ngầm";
+
+"type.railway.station.subway.guangzhou" = "Ngầm";
+
+"type.railway.station.subway.hamburg" = "Ngầm";
+
+"type.railway.station.subway.helsinki" = "Ngầm";
+
+"type.railway.station.subway.hiroshima" = "Ngầm";
+
+"type.railway.station.subway.isfahan" = "Ngầm";
+
+"type.railway.station.subway.istanbul" = "Ngầm";
+
+"type.railway.station.subway.izmir" = "Ngầm";
+
+"type.railway.station.subway.kazan" = "Ngầm";
+
+"type.railway.station.subway.kharkiv" = "Ngầm";
+
 "type.railway.station.subway.kiev" = "Ngầm";
+
+"type.railway.station.subway.kobe" = "Ngầm";
+
+"type.railway.station.subway.kolkata" = "Ngầm";
+
+"type.railway.station.subway.kunming" = "Ngầm";
+
+"type.railway.station.subway.kyoto" = "Ngầm";
+
+"type.railway.station.subway.la" = "Ngầm";
+
+"type.railway.station.subway.lausanne" = "Ngầm";
+
+"type.railway.station.subway.lille" = "Ngầm";
+
+"type.railway.station.subway.lima" = "Ngầm";
+
+"type.railway.station.subway.lisboa" = "Ngầm";
+
+"type.railway.station.subway.lisbon" = "Ngầm";
 
 "type.railway.station.subway.london" = "Ngầm";
 
+"type.railway.station.subway.lyon" = "Ngầm";
+
 "type.railway.station.subway.madrid" = "Ngầm";
+
+"type.railway.station.subway.malaga" = "Ngầm";
+
+"type.railway.station.subway.manila" = "Ngầm";
+
+"type.railway.station.subway.maracaibo" = "Ngầm";
+
+"type.railway.station.subway.mashhad" = "Ngầm";
+
+"type.railway.station.subway.mecca" = "Ngầm";
+
+"type.railway.station.subway.medellin" = "Ngầm";
+
+"type.railway.station.subway.mexico" = "Ngầm";
+
+"type.railway.station.subway.milan" = "Ngầm";
 
 "type.railway.station.subway.minsk" = "Ngầm";
 
+"type.railway.station.subway.montreal" = "Ngầm";
+
 "type.railway.station.subway.moscow" = "Ngầm";
+
+"type.railway.station.subway.munchen" = "Ngầm";
+
+"type.railway.station.subway.nagoya" = "Ngầm";
 
 "type.railway.station.subway.newyork" = "Ngầm";
 
+"type.railway.station.subway.nnov" = "Ngầm";
+
+"type.railway.station.subway.novosibirsk" = "Ngầm";
+
+"type.railway.station.subway.osaka" = "Ngầm";
+
+"type.railway.station.subway.oslo" = "Ngầm";
+
+"type.railway.station.subway.palma" = "Ngầm";
+
+"type.railway.station.subway.panama" = "Ngầm";
+
 "type.railway.station.subway.paris" = "Ngầm";
+
+"type.railway.station.subway.philadelphia" = "Ngầm";
+
+"type.railway.station.subway.pyongyang" = "Ngầm";
+
+"type.railway.station.subway.rennes" = "Ngầm";
+
+"type.railway.station.subway.rio" = "Ngầm";
 
 "type.railway.station.subway.roma" = "Ngầm";
 
+"type.railway.station.subway.rotterdam" = "Ngầm";
+
+"type.railway.station.subway.samara" = "Ngầm";
+
+"type.railway.station.subway.santiago" = "Ngầm";
+
+"type.railway.station.subway.santo_domingo" = "Ngầm";
+
+"type.railway.station.subway.saopaulo" = "Ngầm";
+
+"type.railway.station.subway.sapporo" = "Ngầm";
+
+"type.railway.station.subway.sendai" = "Ngầm";
+
+"type.railway.station.subway.sf" = "Ngầm";
+
+"type.railway.station.subway.shanghai" = "Ngầm";
+
+"type.railway.station.subway.shiraz" = "Ngầm";
+
+"type.railway.station.subway.sofia" = "Ngầm";
+
 "type.railway.station.subway.spb" = "Ngầm";
+
+"type.railway.station.subway.stockholm" = "Ngầm";
+
+"type.railway.station.subway.tabriz" = "Ngầm";
+
+"type.railway.station.subway.taipei" = "Ngầm";
+
+"type.railway.station.subway.taoyuan" = "Ngầm";
+
+"type.railway.station.subway.tashkent" = "Ngầm";
+
+"type.railway.station.subway.tbilisi" = "Ngầm";
+
+"type.railway.station.subway.tianjin" = "Ngầm";
+
+"type.railway.station.subway.tokyo" = "Ngầm";
+
+"type.railway.station.subway.valencia" = "Ngầm";
+
+"type.railway.station.subway.vienna" = "Ngầm";
+
+"type.railway.station.subway.warszawa" = "Ngầm";
+
+"type.railway.station.subway.washington" = "Ngầm";
+
+"type.railway.station.subway.wuhan" = "Ngầm";
+
+"type.railway.station.subway.yerevan" = "Ngầm";
+
+"type.railway.station.subway.yokohama" = "Ngầm";
 
 "type.railway.subway" = "Subway Line";
 
@@ -2698,27 +2915,223 @@
 
 "type.railway.subway_entrance" = "Lỗi vào Metro";
 
-"type.railway.subway_entrance.barcelona" = "Ngầm";
+"type.railway.subway_entrance.adana" = "Lỗi vào Metro";
 
-"type.railway.subway_entrance.berlin" = "Ngầm";
+"type.railway.subway_entrance.algiers" = "Lỗi vào Metro";
 
-"type.railway.subway_entrance.kiev" = "Ngầm";
+"type.railway.subway_entrance.almaty" = "Lỗi vào Metro";
 
-"type.railway.subway_entrance.london" = "Ngầm";
+"type.railway.subway_entrance.amsterdam" = "Lỗi vào Metro";
 
-"type.railway.subway_entrance.madrid" = "Ngầm";
+"type.railway.subway_entrance.ankara" = "Lỗi vào Metro";
 
-"type.railway.subway_entrance.minsk" = "Ngầm";
+"type.railway.subway_entrance.athens" = "Lỗi vào Metro";
 
-"type.railway.subway_entrance.moscow" = "Ngầm";
+"type.railway.subway_entrance.baku" = "Lỗi vào Metro";
 
-"type.railway.subway_entrance.newyork" = "Ngầm";
+"type.railway.subway_entrance.bangkok" = "Lỗi vào Metro";
 
-"type.railway.subway_entrance.paris" = "Ngầm";
+"type.railway.subway_entrance.barcelona" = "Lỗi vào Metro";
 
-"type.railway.subway_entrance.roma" = "Ngầm";
+"type.railway.subway_entrance.beijing" = "Lỗi vào Metro";
 
-"type.railway.subway_entrance.spb" = "Ngầm";
+"type.railway.subway_entrance.bengalore" = "Lỗi vào Metro";
+
+"type.railway.subway_entrance.berlin" = "Lỗi vào Metro";
+
+"type.railway.subway_entrance.brasilia" = "Lỗi vào Metro";
+
+"type.railway.subway_entrance.brescia" = "Lỗi vào Metro";
+
+"type.railway.subway_entrance.brussels" = "Lỗi vào Metro";
+
+"type.railway.subway_entrance.bucharest" = "Lỗi vào Metro";
+
+"type.railway.subway_entrance.budapest" = "Lỗi vào Metro";
+
+"type.railway.subway_entrance.buenos_aires" = "Lỗi vào Metro";
+
+"type.railway.subway_entrance.bursa" = "Lỗi vào Metro";
+
+"type.railway.subway_entrance.cairo" = "Lỗi vào Metro";
+
+"type.railway.subway_entrance.caracas" = "Lỗi vào Metro";
+
+"type.railway.subway_entrance.catania" = "Lỗi vào Metro";
+
+"type.railway.subway_entrance.changchun" = "Lỗi vào Metro";
+
+"type.railway.subway_entrance.chengdu" = "Lỗi vào Metro";
+
+"type.railway.subway_entrance.chicago" = "Lỗi vào Metro";
+
+"type.railway.subway_entrance.chongqing" = "Lỗi vào Metro";
+
+"type.railway.subway_entrance.dalian" = "Lỗi vào Metro";
+
+"type.railway.subway_entrance.delhi" = "Lỗi vào Metro";
+
+"type.railway.subway_entrance.dnepro" = "Lỗi vào Metro";
+
+"type.railway.subway_entrance.dubai" = "Lỗi vào Metro";
+
+"type.railway.subway_entrance.ekb" = "Lỗi vào Metro";
+
+"type.railway.subway_entrance.fukuoka" = "Lỗi vào Metro";
+
+"type.railway.subway_entrance.glasgow" = "Lỗi vào Metro";
+
+"type.railway.subway_entrance.guangzhou" = "Lỗi vào Metro";
+
+"type.railway.subway_entrance.hamburg" = "Lỗi vào Metro";
+
+"type.railway.subway_entrance.helsinki" = "Lỗi vào Metro";
+
+"type.railway.subway_entrance.hiroshima" = "Lỗi vào Metro";
+
+"type.railway.subway_entrance.isfahan" = "Lỗi vào Metro";
+
+"type.railway.subway_entrance.istanbul" = "Lỗi vào Metro";
+
+"type.railway.subway_entrance.izmir" = "Lỗi vào Metro";
+
+"type.railway.subway_entrance.kazan" = "Lỗi vào Metro";
+
+"type.railway.subway_entrance.kharkiv" = "Lỗi vào Metro";
+
+"type.railway.subway_entrance.kiev" = "Lỗi vào Metro";
+
+"type.railway.subway_entrance.kobe" = "Lỗi vào Metro";
+
+"type.railway.subway_entrance.kolkata" = "Lỗi vào Metro";
+
+"type.railway.subway_entrance.kunming" = "Lỗi vào Metro";
+
+"type.railway.subway_entrance.kyoto" = "Lỗi vào Metro";
+
+"type.railway.subway_entrance.la" = "Lỗi vào Metro";
+
+"type.railway.subway_entrance.lausanne" = "Lỗi vào Metro";
+
+"type.railway.subway_entrance.lille" = "Lỗi vào Metro";
+
+"type.railway.subway_entrance.lima" = "Lỗi vào Metro";
+
+"type.railway.subway_entrance.lisboa" = "Lỗi vào Metro";
+
+"type.railway.subway_entrance.lisbon" = "Lỗi vào Metro";
+
+"type.railway.subway_entrance.london" = "Lỗi vào Metro";
+
+"type.railway.subway_entrance.lyon" = "Lỗi vào Metro";
+
+"type.railway.subway_entrance.madrid" = "Lỗi vào Metro";
+
+"type.railway.subway_entrance.malaga" = "Lỗi vào Metro";
+
+"type.railway.subway_entrance.manila" = "Lỗi vào Metro";
+
+"type.railway.subway_entrance.maracaibo" = "Lỗi vào Metro";
+
+"type.railway.subway_entrance.mashhad" = "Lỗi vào Metro";
+
+"type.railway.subway_entrance.mecca" = "Lỗi vào Metro";
+
+"type.railway.subway_entrance.medellin" = "Lỗi vào Metro";
+
+"type.railway.subway_entrance.mexico" = "Lỗi vào Metro";
+
+"type.railway.subway_entrance.milan" = "Lỗi vào Metro";
+
+"type.railway.subway_entrance.minsk" = "Lỗi vào Metro";
+
+"type.railway.subway_entrance.montreal" = "Lỗi vào Metro";
+
+"type.railway.subway_entrance.moscow" = "Lỗi vào Metro";
+
+"type.railway.subway_entrance.munchen" = "Lỗi vào Metro";
+
+"type.railway.subway_entrance.nagoya" = "Lỗi vào Metro";
+
+"type.railway.subway_entrance.newyork" = "Lỗi vào Metro";
+
+"type.railway.subway_entrance.nnov" = "Lỗi vào Metro";
+
+"type.railway.subway_entrance.novosibirsk" = "Lỗi vào Metro";
+
+"type.railway.subway_entrance.osaka" = "Lỗi vào Metro";
+
+"type.railway.subway_entrance.oslo" = "Lỗi vào Metro";
+
+"type.railway.subway_entrance.palma" = "Lỗi vào Metro";
+
+"type.railway.subway_entrance.panama" = "Lỗi vào Metro";
+
+"type.railway.subway_entrance.paris" = "Lỗi vào Metro";
+
+"type.railway.subway_entrance.philadelphia" = "Lỗi vào Metro";
+
+"type.railway.subway_entrance.pyongyang" = "Lỗi vào Metro";
+
+"type.railway.subway_entrance.rennes" = "Lỗi vào Metro";
+
+"type.railway.subway_entrance.rio" = "Lỗi vào Metro";
+
+"type.railway.subway_entrance.roma" = "Lỗi vào Metro";
+
+"type.railway.subway_entrance.rotterdam" = "Lỗi vào Metro";
+
+"type.railway.subway_entrance.samara" = "Lỗi vào Metro";
+
+"type.railway.subway_entrance.santiago" = "Lỗi vào Metro";
+
+"type.railway.subway_entrance.santo_domingo" = "Lỗi vào Metro";
+
+"type.railway.subway_entrance.saopaulo" = "Lỗi vào Metro";
+
+"type.railway.subway_entrance.sapporo" = "Lỗi vào Metro";
+
+"type.railway.subway_entrance.sendai" = "Lỗi vào Metro";
+
+"type.railway.subway_entrance.sf" = "Lỗi vào Metro";
+
+"type.railway.subway_entrance.shanghai" = "Lỗi vào Metro";
+
+"type.railway.subway_entrance.shiraz" = "Lỗi vào Metro";
+
+"type.railway.subway_entrance.sofia" = "Lỗi vào Metro";
+
+"type.railway.subway_entrance.spb" = "Lỗi vào Metro";
+
+"type.railway.subway_entrance.stockholm" = "Lỗi vào Metro";
+
+"type.railway.subway_entrance.tabriz" = "Lỗi vào Metro";
+
+"type.railway.subway_entrance.taipei" = "Lỗi vào Metro";
+
+"type.railway.subway_entrance.taoyuan" = "Lỗi vào Metro";
+
+"type.railway.subway_entrance.tashkent" = "Lỗi vào Metro";
+
+"type.railway.subway_entrance.tbilisi" = "Lỗi vào Metro";
+
+"type.railway.subway_entrance.tianjin" = "Lỗi vào Metro";
+
+"type.railway.subway_entrance.tokyo" = "Lỗi vào Metro";
+
+"type.railway.subway_entrance.valencia" = "Lỗi vào Metro";
+
+"type.railway.subway_entrance.vienna" = "Lỗi vào Metro";
+
+"type.railway.subway_entrance.warszawa" = "Lỗi vào Metro";
+
+"type.railway.subway_entrance.washington" = "Lỗi vào Metro";
+
+"type.railway.subway_entrance.wuhan" = "Lỗi vào Metro";
+
+"type.railway.subway_entrance.yerevan" = "Lỗi vào Metro";
+
+"type.railway.subway_entrance.yokohama" = "Lỗi vào Metro";
 
 "type.railway.tram" = "Tram Line";
 
@@ -2991,9 +3404,9 @@
 
 "type.sport.volleyball" = "Bóng chuyền";
 
-"type.sport.9pin" = "Bowling";
-
 "type.sport.10pin" = "Bowling";
+
+"type.sport.9pin" = "Bowling";
 
 "type.sport.padel" = "Padel";
 

@@ -34,7 +34,8 @@ public:
   using value_type = UniChar;
 
   UniString() {}
-  explicit UniString(size_t n, UniChar c = UniChar()) : BaseT(n, c) {}
+  explicit UniString(size_t n) : BaseT(n) {}
+  UniString(size_t n, UniChar c) { resize(n, c); }
 
   template <typename Iter>
   UniString(Iter b, Iter e) : BaseT(b, e)
@@ -586,6 +587,7 @@ bool StartsWith(IterT1 beg, IterT1 end, IterT2 begPrefix, IterT2 endPrefix)
 
 bool StartsWith(UniString const & s, UniString const & p);
 bool StartsWith(std::string const & s1, char const * s2);
+bool StartsWith(std::string const & s1, std::string_view s2);
 bool StartsWith(std::string const & s, std::string::value_type c);
 bool StartsWith(std::string const & s1, std::string const & s2);
 
