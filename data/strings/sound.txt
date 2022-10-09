@@ -42,7 +42,7 @@
     en = Turn right.
     ar = انعطف يمينا.
     be = Павярніце направа.
-    ca = Gireu a a dreta.
+    ca = Gireu a la dreta.
     cs = Odbočte vpravo.
     da = Drej til højre.
     de = Rechts abbiegen.
